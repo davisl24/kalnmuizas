@@ -2,6 +2,13 @@
 
 Neoficiāls viesu nama Kalnmuiža mājaslapas priekšskatījums, veidots pēc **WEBAGENCY_OS MASTER** principiem.
 
+## Priekšskatījums
+
+- [Atvērt pilnu lapu pārlūkā](https://raw.githack.com/davisl24/kalnmuizas/demo/heritage-editorial-v1/index.html) — trešās puses GitHub HTML skatītājs; ne Vercel deployment.
+- [Alternatīvais HTML Preview](https://htmlpreview.github.io/?https://github.com/davisl24/kalnmuizas/blob/demo/heritage-editorial-v1/index.html) — ja pirmais skatītājs nav pieejams.
+
+Šīs ir neoficiālas skatīšanas saites, nevis produkcijas domēns. Fotogrāfijas vēl nav pievienotas un vietas pašreizējais darbības statuss joprojām nav apstiprināts.
+
 ## Atvērt
 Failu `index.html` var atvērt lokāli pārlūkā bez instalēšanas. Tā ir patstāvīga HTML/CSS lapa bez npm, servera, formu vai datubāzes atkarībām.
 
