@@ -2,9 +2,16 @@
 
 **Atjaunināts:** 2026-10-19  
 **Repo:** `davisl24/kalnmuizas`  
-**Darba zars:** `demo/heritage-editorial-v1`  
-**Statuss:** DEMO KODS PABEIGTS / BROWSER QA NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
+**Galvenais zars:** `main` (demo ir apvienots)  
+**Iepriekšējais darba zars:** `demo/heritage-editorial-v1`  
+**Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
+
+## GitHub stāvoklis un nākamais kontrolpunkts
+- 2026-10-19 ar lietotāja apstiprinājumu apvienots Draft PR #1 ar `main` (squash merge `36e9d3d1da72a36e51073def1b5f674106eda484`).
+- `main` satur `index.html`, `README.md` un `PROJECT_STATE.md`; demo paredzēts lokālai apskatei, nevis oficiālai produkcijas publicēšanai.
+- GitHub koda/enkuru struktūras statiskās pārbaudes ir izpildītas, taču faktiskā `localhost` atvēršana, mobilais/desktop attēlojums un mijiedarbība **nav pārbaudīti**.
+- **Tuvākais uzdevums:** atvērt `main` lokāli, vizuāli iziet visu lapu un novērst tikai konstatētās problēmas.
 
 ## Projektam piemērotais apjoms
 Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt potenciālajam pasākuma apmeklētājam saprast vietu un **precizēt pašreizējo pieejamību**. Neveidot vairākas lapas vai neīstu rezervāciju sistēmu bez pamatojuma.
@@ -32,7 +39,8 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - **Fotogrāfijas:** reālu, aktuālu attēlu tiesības nav verificētas. Hero un galerijā saglabāti atklāti marķēti vietturi.
 
 ## Gatavības vārti
-### Pirms demo dizaina apstiprināšanas
+### Pirms demo gala vizuālā apstiprinājuma
+- [ ] Palaist `main` lokāli ar VS Code Live Server vai `py -m http.server 3000`.
 - [ ] Pārbaudīt faktiskos mobilos/desktop renderējumus: 320, 390, 768, 1120, 1440 px.
 - [ ] Pārbaudīt navigācijas klikšķus un tastatūras darbību ar Enter/Space/Esc, hover/focus un kontrastu.
 - [ ] Pārbaudīt iegūto HTML resursu ātrumu (bez attēliem); ar attēliem vēlāk mērīt Core Web Vitals.
@@ -47,7 +55,7 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - [ ] Iegūt īstas atsauksmes, ja tādas drīkst izmantot; pretējā gadījumā atsauksmju sadaļu nelikt.
 - [ ] Pēc izvēlētā hostinga, reālās datu apstrādes un iesaistītā uzņēmuma datiem sagatavot atbilstošu privātuma informāciju. Sīkdatņu baneris vajadzīgs tikai atbilstoši reālajiem skriptiem/sīkdatnēm, nevis automātiski.
 - [ ] Tikai ar atļauju izņemt DEMO marķējumu un `noindex`, pielikt precīzus SEO meta/strukturētos datus un publicēt.
-- [x] Lietotājs 2026-10-19 apstiprināja visa demo satura pārnešanu uz `main` lokālai apskatei. Tā nav atļauja publicēt oficiālu mājaslapu.
+- [x] Lietotājs 2026-10-19 apstiprināja visa demo satura pārnešanu uz `main` lokālai apskatei; apvienošana veiksmīgi notikusi. Tā nav atļauja publicēt oficiālu mājaslapu.
 
 ## Galvenie avoti
 - https://www.dienvidkurzeme.travel/visainfo/item/aizputes-apkartne/naktsmitnes-aizpute/viesu-nams-kalnmuiza-3/
