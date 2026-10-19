@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1ea">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Kalnmuiža Dunalkā — viesu nama mājaslapas dizaina demo. Pakalpojumu nosacījumi un cenas vēl jāsaskaņo.">
+  <title>Kalnmuiža | Svinību vieta Dunalkā — Dizaina demo</title>
+  <style>
+    :root {
+      --cream: #f5f1ea;
+      --paper: #fbf9f5;
+      --stone: #ded4c7;
+      --sand: #c5b29c;
+      --ink: #2f2a25;
+      --muted: #6d645a;
+      --brown: #564437;
+      --forest: #40473e;
+      --line: #d8d0c5;
+      --serif: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      --sans: "Segoe UI", Arial, Helvetica, sans-serif;
+      --page-pad: clamp(22px, 5.4vw, 88px);
+      --space: clamp(76px, 10vw, 146px);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid #c39f75; outline-offset: 5px; }
+    ::selection { background: #decbb5; color: var(--ink); }
+    .wrap { max-width: 1540px; margin-inline: auto; padding-inline: var(--page-pad); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .skip-link { position:absolute; top:-100px; left:20px; z-index:20; padding:10px 14px; background:white; }
+    .skip-link:focus { top:14px; }
+    .demo-banner { text-align:center; padding:9px 20px; background: #29241f; color:#eee6da; font-size:11px; line-height:1.5; letter-spacing:.025em; }
+    .header { background:var(--cream); position:relative; z-index:5; border-bottom:1px solid var(--line); }
+    .header-in { min-height:87px; display:flex; justify-content:space-between; align-items:center; gap:30px; }
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-sign { font: 37px/1 var(--serif); letter-spacing:-.11em; padding-right:7px; border-right:1px solid #b8ab9b; }
+    .brand-text { display:flex; flex-direction:column; gap:4px; }
+    .brand-text strong { font:400 27px/1.1 var(--serif); letter-spacing:-.05em; }
+    .brand-text small { font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .header-nav { display:flex; align-items:center; gap:clamp(21px,3vw,45px); font-size:13px; }
+    .header-nav > a:not(.nav-contact) { padding-block:10px; border-bottom:1px solid transparent; }
+    .header-nav > a:not(.nav-contact):hover { border-bottom-color:var(--ink); }
+    .nav-contact { display:inline-flex; gap:28px; align-items:center; border:1px solid var(--brown); padding:11px 16px; transition:background .2s,color .2s; }
+    .nav-contact:hover { background:var(--brown); color:var(--paper); }
+    .menu { display:none; position:relative; }
+    .menu summary { font-size:13px; list-style:none; padding:9px 12px; border:1px solid var(--line); cursor:pointer; }
+    .menu summary::-webkit-details-marker { display:none; }
+    .mobile-links { display:flex; position:absolute; top:46px; right:0; width:210px; flex-direction:column; background:var(--paper); padding:10px; border:1px solid var(--line); box-shadow:0 20px 35px #2f2a2520; }
+    .mobile-links a { font-size:14px; padding:12px; }
+    .mobile-links a:hover { background:var(--cream); }
+
+    /* KARLE composition principle: a single wide, unmistakable hero visual. No unlicensed photography. */
+    .hero { min-height: min(820px, 85svh); min-height:clamp(595px, 78svh, 820px); background:#776d5f; position:relative; isolation:isolate; display:flex; align-items:center; color:#fffaf1; overflow:hidden; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(31,27,24,.68) 0%,rgba(31,27,24,.42) 53%,rgba(31,27,24,.07) 100%); }
+    .hero::after { content:""; position:absolute; width:1px; height:72%; right:13%; top:14%; background:rgba(255,255,255,.17); pointer-events:none; }
+    .hero-inner { width:100%; padding-top:72px; padding-bottom:90px; }
+    .hero-copy { position:relative; max-width:850px; }
+    .hero-kicker { font-size:13px; letter-spacing:.06em; margin:0 0 25px; color:#efe4d7; }
+    h1,h2,h3,p { margin-top:0; }
+    .hero h1 { max-width:870px; font:400 clamp(58px,6.4vw,100px)/1.07 var(--serif); letter-spacing:-.049em; margin:0 0 25px; }
+    .hero h1 em { font-style:italic; font-weight:400; }
+    .hero-lead { color:#efe8df; max-width:480px; line-height:1.8; font-size:16px; margin-bottom:32px; }
+    .cta { display:inline-flex; align-items:center; justify-content:space-between; gap:34px; padding:15px 22px; min-height:54px; font-size:14px; font-weight:600; background:var(--cream); color:var(--ink); transition:background .2s, transform .2s; }
+    .cta:hover { background:#e5d8ca; transform:translateY(-1px); }
+    .hero-footnote { margin:16px 0 0; max-width:440px; font-size:12px; color:#eaded0; }
+    .hero-photo-label { position:absolute; right:var(--page-pad); bottom:29px; text-align:right; color:#f2e7dc; font-size:11px; line-height:1.6; letter-spacing:.02em; }
+    .hero-photo-label span { display:block; font-weight:600; letter-spacing:.14em; margin-bottom:3px; text-transform:uppercase; font-size:10px; }
+
+    .section { padding-block:var(--space); }
+    .eyebrow { font-size:12px; letter-spacing:.07em; color:#7b634b; font-weight:600; }
+    .heading { font:400 clamp(39px,4.35vw,65px)/1.13 var(--serif); letter-spacing:-.043em; }
+    .body-copy { color:var(--muted); line-height:1.9; font-size:16px; max-width:630px; }
+    .about { display:grid; grid-template-columns:minmax(170px,.34fr) minmax(0,1fr); column-gap:clamp(45px,7vw,135px); align-items:start; }
+    .about-label { padding-top:13px; display:flex; flex-direction:column; gap:19px; align-items:flex-start; }
+    .small-rule { width:70px; height:1px; background:#aa9885; }
+    .about-copy { max-width:855px; }
+    .about .heading { max-width:790px; margin-bottom:28px; }
+    .stats { margin-top:49px; border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(3,1fr); }
+    .stat { padding:25px 20px 0 0; }
+    .stat strong { display:block; font:400 clamp(36px,4.4vw,63px)/1.1 var(--serif); letter-spacing:-.055em; }
+    .stat span { font-size:13px; line-height:1.65; color:var(--muted); display:block; margin-top:8px; }
+    .data-note { font-size:12px; line-height:1.7; margin:25px 0 0; color:#85786b; }
+
+    .places { background:var(--paper); }
+    .places-head { display:flex; align-items:end; justify-content:space-between; gap:50px; margin-bottom:70px; }
+    .places-head .heading { max-width:700px; margin:14px 0 0; }
+    .places-head > p { max-width:390px; color:var(--muted); font-size:14px; line-height:1.85; margin:0 0 6px; }
+    .feature { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:clamp(38px,6vw,100px); align-items:center; margin-bottom:112px; }
+    .feature--reversed { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+    .feature--reversed .feature-media { grid-column:2; grid-row:1; }
+    .feature--reversed .feature-copy { grid-column:1; grid-row:1; }
+    .feature-media { background:#d4c5b3; min-height:420px; aspect-ratio:1.26; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; border:1px solid #c5b4a0; }
+    .feature--reversed .feature-media { background:#d8d0c4; min-height:370px; aspect-ratio:1.5; }
+    .placeholder { position:relative; z-index:1; padding:38px; max-width:315px; text-align:center; font-size:14px; line-height:1.75; color:#5d5044; }
+    .placeholder::before { content:""; display:block; margin:0 auto 18px; height:41px; width:41px; border:1px solid #a99680; border-radius:50%; background:transparent; }
+    .feature-media::after, .gallery-photo::after { content:""; position:absolute; inset:20px; border:1px solid rgba(84,66,49,.22); pointer-events:none; }
+    .media-index { position:absolute; z-index:1; left:29px; bottom:20px; font-size:11px; color:#706150; letter-spacing:.12em; }
+    .feature-number { display:block; color:#8e7964; font-size:12px; margin-bottom:20px; }
+    .feature-copy h3 { font:400 clamp(35px,3.9vw,56px)/1.15 var(--serif); letter-spacing:-.04em; margin:0 0 22px; }
+    .feature-copy p { color:var(--muted); font-size:16px; line-height:1.9; max-width:430px; margin:0 0 23px; }
+    .detail-link { display:inline-flex; gap:20px; align-items:center; border-bottom:1px solid #86735f; padding-bottom:6px; font-size:14px; font-weight:600; }
+    .detail-link:hover { gap:26px; }
+    .feature--last { display:grid; grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr); margin:0; background:#ebe4d9; align-items:stretch; }
+    .feature--last .feature-copy { padding:clamp(40px,6.5vw,90px); align-self:center; }
+    .feature--last .feature-media { min-height:400px; height:100%; aspect-ratio:auto; background:#c7c7b8; border:none; }
+    .feature--last .feature-media::after { border-color:rgba(70,77,60,.23); }
+    .feature--last .placeholder { color:#485044; }
+
+    .gallery-head { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:40px; }
+    .gallery-head .heading { margin:13px 0 0; }
+    .gallery-head p { max-width:355px; color:var(--muted); font-size:14px; line-height:1.8; margin:0; }
+    .gallery-grid { display:grid; grid-template-columns:1.32fr 1fr; grid-template-rows:245px 245px; gap:17px; }
+    .gallery-photo { display:flex; align-items:center; justify-content:center; position:relative; min-height:0; background:#c9bdad; margin:0; overflow:hidden; }
+    .gallery-photo:first-child { grid-row:span 2; }
+    .gallery-photo:nth-child(2) { background:#e0d8cd; }
+    .gallery-photo:nth-child(3) { background:#ccc9bc; }
+    .gallery-photo figcaption { position:absolute; bottom:16px; left:18px; background:rgba(250,248,243,.9); color:var(--ink); padding:8px 12px; font-size:12px; }
+    .gallery-fine { color:#84776b; font-size:12px; margin:21px 0 0; }
+
+    .where { background:#e6ded1; }
+    .where-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.85fr); gap:clamp(55px,8vw,150px); align-items:center; }
+    .where .heading { margin:14px 0 24px; }
+    .where-description { max-width:525px; color:#665c52; margin:0 0 28px; }
+    .where-aside { border-left:1px solid #c3b8a8; padding:44px 0 44px 60px; }
+    .where-aside span { display:block; font-size:11px; letter-spacing:.1em; color:#857260; text-transform:uppercase; }
+    .where-aside strong { font:400 clamp(43px,5.1vw,77px)/1.1 var(--serif); display:block; margin:19px 0; letter-spacing:-.045em; }
+    .where-aside p { color:#74695c; font-size:14px; margin:0; line-height:1.7; }
+
+    .contact { background:#322c26; color:#f8f3e9; padding:clamp(88px,10vw,140px) 0 42px; }
+    .contact-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:70px; align-items:center; }
+    .contact .eyebrow { color:#d7b69a; }
+    .contact .heading { max-width:770px; margin:17px 0 23px; }
+    .contact p { max-width:520px; color:#d2c7b9; line-height:1.85; font-size:14px; margin:0; }
+    .contact-way { display:flex; flex-direction:column; gap:22px; align-items:flex-start; padding-top:16px; }
+    .phone { font:400 clamp(31px,3.7vw,51px)/1.25 var(--serif); letter-spacing:-.035em; padding-bottom:13px; border-bottom:1px solid #9e8c79; }
+    .phone:hover { color:#e4c9ac; }
+    .contact-way a:not(.phone) { font-size:14px; text-decoration:underline; text-underline-offset:5px; }
+    .contact-way small { font-size:12px; line-height:1.75; color:#d2c7b9; max-width:315px; }
+    .footer { margin-top:110px; padding-top:27px; border-top:1px solid #685c50; display:flex; justify-content:space-between; gap:25px; font-size:12px; color:#b8afa4; }
+    .footer a { text-decoration:underline; text-underline-offset:4px; }
+
+    @media (max-width:1050px) {
+      .hero h1 { max-width:725px; }
+      .feature, .feature--reversed { gap:42px; }
+      .feature-media { min-height:340px; }
+      .feature--reversed .feature-media { min-height:290px; }
+      .gallery-grid { grid-template-rows:220px 220px; }
+    }
+    @media (max-width:760px) {
+      :root { --page-pad:22px; --space:76px; }
+      .header-in { min-height:73px; }
+      .brand-sign { font-size:33px; }
+      .brand-text strong { font-size:24px; }
+      .brand-text small { font-size:8px; }
+      .header-nav { display:none; }
+      .menu { display:block; }
+      .hero { min-height:max(615px,calc(87svh - 74px)); align-items:center; }
+      .hero::before { background:linear-gradient(90deg,rgba(31,27,24,.78),rgba(31,27,24,.3)); }
+      .hero::after { display:none; }
+      .hero-inner { padding-top:76px; padding-bottom:110px; }
+      .hero h1 { font-size:clamp(49px,10vw,69px); }
+      .hero-lead { font-size:15px; max-width:360px; }
+      .hero-photo-label { bottom:18px; left:var(--page-pad); right:var(--page-pad); text-align:left; }
+      .heading { font-size:clamp(37px,8.5vw,50px); }
+      .about { display:block; }
+      .about-label { margin-bottom:30px; }
+      .stats { margin-top:37px; }
+      .stat { padding-right:10px; }
+      .stat strong { font-size:39px; }
+      .stat span { font-size:12px; }
+      .places-head, .gallery-head { display:block; margin-bottom:33px; }
+      .places-head > p, .gallery-head > p { margin-top:22px; }
+      .feature, .feature--reversed { display:flex; flex-direction:column; align-items:stretch; gap:23px; margin-bottom:70px; }
+      .feature--reversed .feature-media, .feature--reversed .feature-copy { grid-column:auto; grid-row:auto; }
+      .feature-media, .feature--reversed .feature-media { min-height:0; aspect-ratio:1.26; }
+      .feature-copy h3 { font-size:37px; }
+      .feature-number { margin-bottom:12px; }
+      .feature--last { display:flex; flex-direction:column-reverse; margin-bottom:0; }
+      .feature--last .feature-media { aspect-ratio:1.35; min-height:0; }
+      .feature--last .feature-copy { padding:33px 28px 39px; align-self:stretch; }
+      .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:305px 210px; gap:11px; }
+      .gallery-photo:first-child { grid-column:span 2; grid-row:span 1; }
+      .gallery-photo .placeholder { font-size:12px; padding:18px; }
+      .where-grid, .contact-grid { grid-template-columns:1fr; gap:45px; }
+      .where-aside { padding:28px 0 0; border-left:0; border-top:1px solid #c3b8a8; }
+      .where-aside strong { font-size:51px; }
+      .contact { padding-top:80px; }
+      .contact-way { padding-top:0; }
+      .footer { margin-top:80px; flex-direction:column; gap:15px; }
+    }
+    @media (max-width:420px) {
+      :root { --page-pad:18px; }
+      .hero { min-height:600px; }
+      .hero h1 { font-size:46px; }
+      .hero-kicker { font-size:12px; }
+      .hero-lead { font-size:15px; line-height:1.7; }
+      .stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .stat strong { font-size:34px; }
+      .gallery-grid { grid-template-rows:250px 160px; }
+      .feature-copy h3 { font-size:34px; }
+      .placeholder { font-size:13px; }
+      .phone { font-size:32px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { transition:none!important; }
+    }
+
+    /* Refined demo UX: sticky header, accessible navigation and compact contact pathway. */
+    .header {position:sticky;top:0;z-index:10;box-shadow:0 1px 0 var(--line);}
+    main section[id] {scroll-margin-top:96px;}
+    .header-nav ul {list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:clamp(16px,2vw,32px);}
+    .header-nav a {display:inline-flex;align-items:center;white-space:nowrap;}
+    .header-nav a:not(.nav-contact) {padding-block:10px;border-bottom:1px solid transparent;}
+    .header-nav a:not(.nav-contact):is(:hover,:focus-visible) {border-color:var(--ink);}
+    .header-nav .header-phone {font-size:12px;letter-spacing:-.01em;}
+    .mobile-actions {display:none;align-items:center;gap:9px;}
+    .mobile-call {display:inline-flex;align-items:center;min-height:43px;padding:7px 11px;background:var(--brown);color:#fff;font-size:13px;font-weight:600;white-space:nowrap;}
+    .menu summary {min-height:43px;display:flex;align-items:center;}
+    .mobile-links ul,.footer-nav ul {list-style:none;margin:0;padding:0;}
+    .mobile-links a {display:block;}
+    .header-nav a:focus-visible,.mobile-call:focus-visible,.cta:focus-visible,.detail-link:focus-visible,.contact-primary:focus-visible,.footer a:focus-visible {outline:2px solid #c39f75;outline-offset:4px;}
+    .how {background:#eae3d9;}
+    .how-intro {display:grid;grid-template-columns:.26fr 1fr;gap:24px 70px;align-items:baseline;}
+    .how-intro .heading {margin:0;}
+    .how-intro p {grid-column:2;max-width:650px;margin:0;color:var(--muted);font-size:15px;}
+    .steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;padding:0;margin:55px 0 36px;border-top:1px solid #c8bbae;border-bottom:1px solid #c8bbae;}
+    .steps li {padding:28px 28px 36px 0;min-width:0;}
+    .steps li + li {border-left:1px solid #c8bbae;padding-left:28px;}
+    .step-index {display:block;color:#826e5a;font-size:12px;margin-bottom:21px;}
+    .steps strong {display:block;font:400 clamp(23px,2.35vw,34px)/1.25 var(--serif);margin-bottom:11px;}
+    .steps p {color:var(--muted);font-size:14px;margin:0;line-height:1.75;}
+    .faq {background:var(--cream);}
+    .faq-grid {display:grid;grid-template-columns:.84fr 1.16fr;gap:clamp(38px,7vw,115px);}
+    .faq-heading .heading {margin:14px 0 21px;}
+    .faq-heading p {max-width:410px;font-size:14px;line-height:1.85;color:var(--muted);}
+    .faq-list {border-top:1px solid var(--line);}
+    .faq-list details {border-bottom:1px solid var(--line);}
+    .faq-list summary {font:400 21px/1.4 var(--serif);padding:25px 40px 25px 0;position:relative;cursor:pointer;list-style:none;}
+    .faq-list summary::-webkit-details-marker {display:none;}
+    .faq-list summary::after {content:"+";position:absolute;right:2px;top:22px;font:400 25px var(--sans);color:var(--muted);}
+    .faq-list details[open] summary::after {content:"−";}
+    .faq-list details p {max-width:570px;margin:0;padding:0 35px 23px 0;font-size:14px;line-height:1.85;color:var(--muted);}
+    .faq-list details a {text-decoration:underline;text-underline-offset:3px;}
+    .contact-primary {display:inline-flex;align-items:center;gap:30px;background:#f5f1ea;color:#322c26;padding:15px 19px;font-size:14px;font-weight:600;min-height:51px;}
+    .contact-primary:hover {background:#e9dacc;}
+    .footer {display:grid;grid-template-columns:1.1fr .8fr 1fr;gap:45px;align-items:start;}
+    .footer-brand,.footer-info {display:flex;flex-direction:column;gap:9px;min-width:0;}
+    .footer-brand strong {font:400 26px var(--serif);color:#f5f1ea;}
+    .footer-nav a,.footer-info a {display:inline-block;min-height:30px;}
+    .footer-nav ul {display:grid;gap:9px;}
+    .footer-info {font-size:13px;line-height:1.65;}
+    .legal-row {border-top:1px solid #685c50;display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:18px;margin-top:36px;color:#b8afa4;font-size:11px;line-height:1.65;}
+    .legal-row a {white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}
+    /* At tablet widths the visible call control replaces desktop navigation. */
+    @media(max-width:1120px) {
+      .header-nav {display:none;}
+      .mobile-actions {display:flex;}
+      .menu {display:block;}
+    }
+    @media(max-width:760px) {
+      .how-intro,.faq-grid {display:block;}
+      .how-intro .heading,.faq-heading .heading {margin:13px 0 18px;}
+      .how-intro p {max-width:620px;}
+      .steps {grid-template-columns:1fr;gap:0;margin-top:32px;}
+      .steps li,.steps li + li {padding:21px 0;border-left:0;}
+      .steps li + li {border-top:1px solid #c8bbae;}
+      .step-index {margin-bottom:8px;}
+      .faq-heading {margin-bottom:30px;}
+      .faq-list summary {font-size:19px;}
+      .footer {grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 20px;}
+      .footer-brand {grid-column:1/-1;}
+      .legal-row {flex-direction:column;align-items:flex-start;gap:8px;}
+    }
+    @media(max-width:420px) {
+      .brand-text small {letter-spacing:.09em;}
+      .header-in {gap:10px;}
+      .mobile-call {padding:7px 9px;}
+      .menu summary {padding:8px 9px;}
+      .footer {gap:28px 12px;}
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
+  <div class="demo-banner"><strong>DIZAINA DEMO</strong> · Šis nav viesu nama oficiālais resurss. Aktuālā informācija un fotogrāfijas vēl jāsaskaņo.</div>
+  <header class="header" id="lapas-augsa">
+    <div class="wrap header-in">
+      <a class="brand" href="#sakums" aria-label="Kalnmuiža — uz sākumu">
+        <span class="brand-sign" aria-hidden="true">K</span>
+        <span class="brand-text"><strong>Kalnmuiža</strong><small>Viesu nams · Dunalka</small></span>
+      </a>
+      <nav class="header-nav" aria-label="Galvenā navigācija">
+        <ul>
+          <li><a href="#par-vietu">Par vietu</a></li>
+          <li><a href="#iespejas">Iespējas</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="tel:+37129824636" class="header-phone" aria-label="Zvanīt pa tālruni +371 29824636">+371 29824636</a></li>
+          <li><a class="nav-contact" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+      <div class="mobile-actions">
+        <a href="tel:+37129824636" class="mobile-call" aria-label="Zvanīt uz +371 29824636">Zvanīt ↗</a>
+        <details class="menu">
+          <summary aria-label="Atvērt navigācijas izvēlni">Izvēlne</summary>
+          <nav class="mobile-links" aria-label="Mobilā navigācija">
+            <ul>
+              <li><a href="#par-vietu">Par vietu</a></li>
+              <li><a href="#iespejas">Iespējas</a></li>
+              <li><a href="#galerija">Galerija</a></li>
+              <li><a href="#ka-sazinaties">Kā sazināties</a></li>
+              <li><a href="#kontakti">Kontakti</a></li>
+            </ul>
+          </nav>
+        </details>
+      </div>
+    </div>
+  </header>
+  <main id="saturs">
+    <section class="hero" id="sakums" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">Dunalka, Dienvidkurzeme · Vēsturisks viesu nams</p>
+          <h1 id="hero-title">Svinības vēsturiskajā <em>Kalnmuižā.</em></h1>
+          <p class="hero-lead">Dunalkā, Dienvidkurzemē. Tūrisma katalogos minēta svinību zāle līdz 60 viesiem, nakšņošana un pirts.</p>
+          <a class="cta" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
+          <p class="hero-footnote">Pirms pasākuma rezervēšanas precizē brīvos datumus un pakalpojumu nosacījumus.</p>
+        </div>
+      </div>
+      <div class="hero-photo-label"><span>Foto vieta / 01</span>Šeit paredzēta aktuāla Kalnmuižas fotogrāfija ar publicēšanas atļauju.</div>
+    </section>
+
+    <section class="section wrap about" id="par-vietu" aria-labelledby="about-title">
+      <div class="about-label"><span class="eyebrow">Par Kalnmuižu</span><span class="small-rule" aria-hidden="true"></span></div>
+      <div class="about-copy">
+        <h2 class="heading" id="about-title">200 gadu vēsture Dunalkas laukos</h2>
+        <p class="body-copy">Kalnmuiža ir aptuveni 200 gadu sena ēka Dunalkas pagastā. Tūrisma katalogi to apraksta kā vietu privātām svinībām un nakšņošanai bioloģiskās saimniecības teritorijā.</p>
+        <div class="stats">
+          <div class="stat"><strong>60</strong><span>viesiem paredzēta svinību zāle katalogos</span></div>
+          <div class="stat"><strong>7</strong><span>viesu istabas vēsturiskajā aprakstā</span></div>
+          <div class="stat"><strong>200</strong><span>aptuvenais ēkas vecums gados</span></div>
+        </div>
+        <p class="data-note">Šie ir iepriekš publicēti tūrisma katalogu dati, nevis apstiprināts šodienas piedāvājums.</p>
+      </div>
+    </section>
+
+    <section class="section places" id="iespejas" aria-labelledby="places-title">
+      <div class="wrap">
+        <div class="places-head">
+          <div><span class="eyebrow">Vietas iespējas</span><h2 class="heading" id="places-title">Svinības, nakšņošana un atpūta</h2></div>
+          <p>Svinību zāle, nakšņošana un atpūtas iespējas — iepazīsti piedāvājumu un noskaidro sev vajadzīgos nosacījumus.</p>
+        </div>
+
+        <article class="feature" aria-labelledby="celebrate-title">
+          <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas svinību zāles fotogrāfijai">
+            <span class="placeholder">Svinību zāles fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 01</span>
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">01 / Svinībām</span>
+            <h3 id="celebrate-title">Telpa svētkiem un kopā būšanai</h3>
+            <p>Katalogos norādīta zāle līdz 60 viesiem kāzām, jubilejām un privātiem pasākumiem. Aktuālo ietilpību un nosacījumus vēl jāprecizē.</p>
+            <a class="detail-link" href="#kontakti">Precizēt svinību iespējas <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="feature feature--reversed" aria-labelledby="stay-title">
+          <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas viesu istabu fotogrāfijai">
+            <span class="placeholder">Viesu istabu fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 02</span>
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">02 / Nakšņošanai</span>
+            <h3 id="stay-title">Palikt ilgāk nekā vienu vakaru</h3>
+            <p>Publicētajos aprakstos norādītas septiņas istabas, lai viesi varētu palikt pēc svinībām. Pieejamība un guļvietu skaits šobrīd nav apstiprināts.</p>
+            <a class="detail-link" href="#kontakti">Jautāt par nakšņošanu <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="feature--last" aria-labelledby="nature-title">
+          <div class="feature-copy">
+            <span class="feature-number">03 / Atpūtai</span>
+            <h3 id="nature-title">Pirts un laiks pie dabas</h3>
+            <p>Katalogos aprakstīta pirts, dīķis un atpūta teritorijā. Par to pašreizējo pieejamību jājautā saimniekiem.</p>
+            <a class="detail-link" href="#kontakti">Sazināties par atpūtu <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas teritorijas vai pirts fotogrāfijai">
+            <span class="placeholder">Teritorijas vai pirts fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 03</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section how" id="ka-sazinaties" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="how-intro">
+          <span class="eyebrow">Sazināšanās</span>
+          <h2 class="heading" id="how-title">Kā noskaidrot pieejamību?</h2>
+          <p>Vienkārši trīs soļi, lai noskaidrotu, vai vieta ir piemērota plānotajam pasākumam.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="step-index" aria-hidden="true">01</span><strong>Piezvani</strong><p>Izmanto tūrisma katalogā norādīto tālruni.</p></li>
+          <li><span class="step-index" aria-hidden="true">02</span><strong>Pastāsti par ieceri</strong><p>Norādi vēlamo datumu, viesu skaitu un vajadzīgās iespējas.</p></li>
+          <li><span class="step-index" aria-hidden="true">03</span><strong>Precizē detaļas</strong><p>Noskaidro, vai pakalpojums pieejams, kāda ir cena un nosacījumi.</p></li>
+        </ol>
+        <a class="detail-link" href="tel:+37129824636">Zvanīt +371 29824636 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="galerija" aria-labelledby="gallery-title">
+      <div class="gallery-head">
+        <div><span class="eyebrow">Galerija</span><h2 class="heading" id="gallery-title">Kalnmuiža tuvplānā</h2></div>
+        <p>Šeit paredzētas tikai reālas, aktuālas vietas fotogrāfijas. Attēlu tiesības vēl nav apstiprinātas.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts aktuāls ēkas vai zāles foto</span><figcaption>Ēka un svinību zāle</figcaption></figure>
+        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts istabu foto</span><figcaption>Nakšņošana</figcaption></figure>
+        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts apkārtnes foto</span><figcaption>Apkārtne</figcaption></figure>
+      </div>
+      <p class="gallery-fine">Demo izmanto tekstuālus attēlu vietturus, nevis stock vai AI ģenerētas viesu nama fotogrāfijas.</p>
+    </section>
+
+
+    <section class="section faq" id="jautajumi" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-heading"><span class="eyebrow">Pirms sazināšanās</span><h2 class="heading" id="faq-title">Biežākie jautājumi</h2><p>Atbildes balstītas publiskajos aprakstos. Cenas, ietilpība un konkrēto datumu pieejamība jāprecizē ar saimniekiem.</p></div>
+        <div class="faq-list">
+          <details><summary>Kā uzzināt brīvos datumus?</summary><p>Kalnmuiža darbojas. Konkrēta pasākuma datuma pieejamību noskaidro, sazinoties ar saimniekiem pa norādīto tālruni.</p></details>
+          <details><summary>Cik viesu varēja uzņemt svinību zālē?</summary><p>Publiskajos katalogos norādīta zāle līdz 60 viesiem. Aktuālā ietilpība jāprecizē.</p></details>
+          <details><summary>Vai iespējama nakšņošana?</summary><p>Vēsturiskajos aprakstos minētas septiņas istabas. Guļvietu skaits katalogos atšķiras, tāpēc to un pašreizējo pieejamību nepieciešams noskaidrot.</p></details>
+          <details><summary>Cik maksā svinību zāles un viesu nama īre?</summary><p>Dažos tūrisma katalogos publicētas cenas, bet to aktualitāte nav apstiprināta. Par cenu, iespējamo īres ilgumu un nosacījumiem jājautā saimniekiem.</p></details>
+          <details><summary>Kur atrodas Kalnmuiža?</summary><p>Dunalkas pagastā, Dienvidkurzemes novadā. <a href="https://www.google.com/maps/search/?api=1&amp;query=Kalnmui%C5%BEa%20Dunalkas%20pagasts" target="_blank" rel="noopener noreferrer">Atvērt atrašanās vietas meklējumu kartē ↗</a></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section where" aria-labelledby="where-title">
+      <div class="wrap where-grid">
+        <div>
+          <span class="eyebrow">Atrašanās vieta</span>
+          <h2 class="heading" id="where-title">Dunalka, Dienvidkurzeme</h2>
+          <p class="where-description">“Kalnmuiža”, Dunalkas pagasts, Dienvidkurzemes novads. Pirms došanās saskaņo apmeklējumu un vēlamo datumu.</p>
+          <a class="detail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kalnmui%C5%BEa%20Dunalkas%20pagasts" target="_blank" rel="noopener noreferrer">Meklēt Google Maps <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="where-aside"><span>Kurzemes lauki</span><strong>Kalnmuiža.<br>Dunalka.</strong><p>Vēsturisks viesu nams Dienvidkurzemē.</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakti" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow">Saziņa</span>
+            <h2 class="heading" id="contact-title">Plāno svinības Kalnmuižā?</h2>
+            <p>Noskaidro brīvos datumus, aktuālās cenas un viesu uzņemšanas nosacījumus, zvanot pa publiskajos katalogos norādīto tālruni.</p>
+          </div>
+          <div class="contact-way">
+            <a class="contact-primary" href="tel:+37129824636">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
+            <a class="phone" href="tel:+37129824636" aria-label="Zvanīt uz +371 29824636">+371 29824636 ↗</a>
+            <a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Kalnmuiža Facebook ↗</a>
+            <small>Netiek piedāvāta rezervācijas forma, cenas vai neapstiprināti pieejamības datumi.</small>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-brand"><strong>Kalnmuiža</strong><span>Viesu nams Dunalkā · Neoficiāls mājaslapas dizaina koncepts</span></div>
+          <nav class="footer-nav" aria-label="Kājenes navigācija">
+            <ul><li><a href="#par-vietu">Par vietu</a></li><li><a href="#iespejas">Iespējas</a></li><li><a href="#galerija">Galerija</a></li><li><a href="#kontakti">Kontakti</a></li></ul>
+          </nav>
+          <div class="footer-info"><a href="tel:+37129824636">+371 29824636</a><span>Kalnmuiža, Dunalkas pagasts</span><a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div>
+        </footer>
+        <div class="legal-row"><span>© 2026 · Tikai dizaina demonstrācijai · Nekas nav apstiprināts kā oficiāls piedāvājums</span><a href="https://www.dienvidkurzeme.travel/visainfo/item/svinibu-vietas/svinibu-vietas-1/viesu-nams-kalnmuiza-6/" target="_blank" rel="noopener noreferrer">Informācijas avots ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  (() => {
+    const menu = document.querySelector('.menu');
+    if (!menu) return;
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+  })();
+</script>
+</body>
+</html>
