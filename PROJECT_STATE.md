@@ -1,13 +1,14 @@
 # PROJECT STATE — Kalnmuiža demo
 
-**Datums:** 2026-10-14
+**Atjaunināts:** 2026-10-19
 **Repo:** `davisl24/kalnmuizas`
 **Darba zars:** `demo/heritage-editorial-v1`
 **Statuss:** BUILT / BROWSER QA NOT TESTED / APPROVAL PENDING
-**Dizaina virziens:** A — Heritage Editorial (apstiprināts)
+**Dizaina virziens:** A — Heritage Editorial (apstiprināts). 2026-10-19 apstiprināta KARLE pilna platuma Hero kompozīcijas principa pārnese.
 
 ## Apstiprinātais dizains
-- Viena lapa ar sešām sadaļām: Hero; Par vietu; Iespējas; Galerija; Atrašanās vieta; Kontakti.
+- Viena lapa ar sešām galvenajām sadaļām: Hero; Par vietu; Iespējas (svinību zāle, nakšņošana, pirts un daba); Galerija; Atrašanās vieta; Kontakti.
+- Pilna platuma Hero (KARLE kompozīcijas princips), mainīgs attēlu/teksta ritms, lielas editorial fotolaukumu proporcijas; nevis KARLE dizaina vai satura kopija.
 - Silta, atturīga editorial tipogrāfija un krāsu sistēma.
 - Tikai īsti Kalnmuižas attēli ar atļauju; pašlaik ir tikai tekstuāli vietturi.
 - Bez neīstas rezervācijas sistēmas. Esošais CTA ir zvanīšanas saite ar skaidri nosauktu mērķi.
@@ -27,6 +28,7 @@ Pirms atļaujas publicēt kā oficiālu vietni jānoskaidro:
 
 ## Pārbaudes
 - [x] Statiskā HTML struktūra, navigācijas enkuri, UTF-8, LV, responsīvās CSS media queries (koda pārbaude no avota).
+- [x] 2026-10-19: atkārtota statiskā pārbaude: nav dublētu ID vai bojātu iekšējo enkuru, CSS iekavas sabalansētas, noindex saglabāts, nav ārējo attēlu vai skriptu.
 - [x] Nav ārējo skriptu, izsekošanas vai fiktīvu rezervācijas formu.
 - [x] GitHub darba zars, nošķirts no Kestrel.
 - [ ] Reāls desktop/mobile browser QA (320, 390, 768 un 1440 px).
