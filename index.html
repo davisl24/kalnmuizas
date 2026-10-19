@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f5f1ea">
   <meta name="robots" content="noindex,nofollow">
   <meta name="description" content="Kalnmuiža Dunalkā — neoficiāls viesu nama mājaslapas dizaina koncepts. Pakalpojumu pieejamība vēl jāapstiprina.">
-  <title>Kalnmuiža — svinību vieta ar savu stāstu | Dizaina demo</title>
+  <title>Kalnmuiža | Svinību vieta Dunalkā — Dizaina demo</title>
   <style>
     :root {
       --cream: #f5f1ea;
@@ -209,29 +209,119 @@
       html { scroll-behavior:auto; }
       *,*::before,*::after { transition:none!important; }
     }
+
+    /* Refined demo UX: sticky header, accessible navigation and compact contact pathway. */
+    .header {position:sticky;top:0;z-index:10;box-shadow:0 1px 0 var(--line);}
+    main section[id] {scroll-margin-top:96px;}
+    .header-nav ul {list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:clamp(16px,2vw,32px);}
+    .header-nav a {display:inline-flex;align-items:center;white-space:nowrap;}
+    .header-nav a:not(.nav-contact) {padding-block:10px;border-bottom:1px solid transparent;}
+    .header-nav a:not(.nav-contact):is(:hover,:focus-visible) {border-color:var(--ink);}
+    .header-nav .header-phone {font-size:12px;letter-spacing:-.01em;}
+    .mobile-actions {display:none;align-items:center;gap:9px;}
+    .mobile-call {display:inline-flex;align-items:center;min-height:43px;padding:7px 11px;background:var(--brown);color:#fff;font-size:13px;font-weight:600;white-space:nowrap;}
+    .menu summary {min-height:43px;display:flex;align-items:center;}
+    .mobile-links ul,.footer-nav ul {list-style:none;margin:0;padding:0;}
+    .mobile-links a {display:block;}
+    .header-nav a:focus-visible,.mobile-call:focus-visible,.cta:focus-visible,.detail-link:focus-visible,.contact-primary:focus-visible,.footer a:focus-visible {outline:2px solid #c39f75;outline-offset:4px;}
+    .how {background:#eae3d9;}
+    .how-intro {display:grid;grid-template-columns:.26fr 1fr;gap:24px 70px;align-items:baseline;}
+    .how-intro .heading {margin:0;}
+    .how-intro p {grid-column:2;max-width:650px;margin:0;color:var(--muted);font-size:15px;}
+    .steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;padding:0;margin:55px 0 36px;border-top:1px solid #c8bbae;border-bottom:1px solid #c8bbae;}
+    .steps li {padding:28px 28px 36px 0;min-width:0;}
+    .steps li + li {border-left:1px solid #c8bbae;padding-left:28px;}
+    .step-index {display:block;color:#826e5a;font-size:12px;margin-bottom:21px;}
+    .steps strong {display:block;font:400 clamp(23px,2.35vw,34px)/1.25 var(--serif);margin-bottom:11px;}
+    .steps p {color:var(--muted);font-size:14px;margin:0;line-height:1.75;}
+    .faq {background:var(--cream);}
+    .faq-grid {display:grid;grid-template-columns:.84fr 1.16fr;gap:clamp(38px,7vw,115px);}
+    .faq-heading .heading {margin:14px 0 21px;}
+    .faq-heading p {max-width:410px;font-size:14px;line-height:1.85;color:var(--muted);}
+    .faq-list {border-top:1px solid var(--line);}
+    .faq-list details {border-bottom:1px solid var(--line);}
+    .faq-list summary {font:400 21px/1.4 var(--serif);padding:25px 40px 25px 0;position:relative;cursor:pointer;list-style:none;}
+    .faq-list summary::-webkit-details-marker {display:none;}
+    .faq-list summary::after {content:"+";position:absolute;right:2px;top:22px;font:400 25px var(--sans);color:var(--muted);}
+    .faq-list details[open] summary::after {content:"−";}
+    .faq-list details p {max-width:570px;margin:0;padding:0 35px 23px 0;font-size:14px;line-height:1.85;color:var(--muted);}
+    .faq-list details a {text-decoration:underline;text-underline-offset:3px;}
+    .contact-primary {display:inline-flex;align-items:center;gap:30px;background:#f5f1ea;color:#322c26;padding:15px 19px;font-size:14px;font-weight:600;min-height:51px;}
+    .contact-primary:hover {background:#e9dacc;}
+    .footer {display:grid;grid-template-columns:1.1fr .8fr 1fr;gap:45px;align-items:start;}
+    .footer-brand,.footer-info {display:flex;flex-direction:column;gap:9px;min-width:0;}
+    .footer-brand strong {font:400 26px var(--serif);color:#f5f1ea;}
+    .footer-nav a,.footer-info a {display:inline-block;min-height:30px;}
+    .footer-nav ul {display:grid;gap:9px;}
+    .footer-info {font-size:13px;line-height:1.65;}
+    .legal-row {border-top:1px solid #685c50;display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:18px;margin-top:36px;color:#b8afa4;font-size:11px;line-height:1.65;}
+    .legal-row a {white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}
+    @media(max-width:1060px) {
+      .header-nav ul {gap:15px;}
+      .header-nav .header-phone {display:none;}
+    }
+    @media(max-width:930px) {
+      .header-nav {display:none;}
+      .mobile-actions {display:flex;}
+      .menu {display:block;}
+    }
+    @media(max-width:760px) {
+      .how-intro,.faq-grid {display:block;}
+      .how-intro .heading,.faq-heading .heading {margin:13px 0 18px;}
+      .how-intro p {max-width:620px;}
+      .steps {grid-template-columns:1fr;gap:0;margin-top:32px;}
+      .steps li,.steps li + li {padding:21px 0;border-left:0;}
+      .steps li + li {border-top:1px solid #c8bbae;}
+      .step-index {margin-bottom:8px;}
+      .faq-heading {margin-bottom:30px;}
+      .faq-list summary {font-size:19px;}
+      .footer {grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 20px;}
+      .footer-brand {grid-column:1/-1;}
+      .legal-row {flex-direction:column;align-items:flex-start;gap:8px;}
+    }
+    @media(max-width:420px) {
+      .brand-text small {letter-spacing:.09em;}
+      .header-in {gap:10px;}
+      .mobile-call {padding:7px 9px;}
+      .menu summary {padding:8px 9px;}
+      .footer {gap:28px 12px;}
+    }
+
   </style>
 </head>
 <body>
   <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
   <div class="demo-banner"><strong>DIZAINA DEMO</strong> · Šis nav viesu nama oficiālais resurss. Aktuālā informācija un fotogrāfijas vēl jāsaskaņo.</div>
-  <header class="header">
+  <header class="header" id="lapas-augsa">
     <div class="wrap header-in">
       <a class="brand" href="#sakums" aria-label="Kalnmuiža — uz sākumu">
         <span class="brand-sign" aria-hidden="true">K</span>
         <span class="brand-text"><strong>Kalnmuiža</strong><small>Viesu nams · Dunalka</small></span>
       </a>
       <nav class="header-nav" aria-label="Galvenā navigācija">
-        <a href="#par-vietu">Par Kalnmuižu</a>
-        <a href="#iespejas">Svinības un atpūta</a>
-        <a href="#galerija">Galerija</a>
-        <a class="nav-contact" href="#kontakti">Kontakti <span aria-hidden="true">↗</span></a>
+        <ul>
+          <li><a href="#par-vietu">Par vietu</a></li>
+          <li><a href="#iespejas">Iespējas</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="tel:+37129824636" class="header-phone" aria-label="Zvanīt pa tālruni +371 29824636">+371 29824636</a></li>
+          <li><a class="nav-contact" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a></li>
+        </ul>
       </nav>
-      <details class="menu">
-        <summary>Izvēlne</summary>
-        <nav class="mobile-links" aria-label="Mobilā navigācija">
-          <a href="#par-vietu">Par Kalnmuižu</a><a href="#iespejas">Svinības un atpūta</a><a href="#galerija">Galerija</a><a href="#kontakti">Kontakti</a>
-        </nav>
-      </details>
+      <div class="mobile-actions">
+        <a href="tel:+37129824636" class="mobile-call" aria-label="Zvanīt uz +371 29824636">Zvanīt ↗</a>
+        <details class="menu">
+          <summary aria-label="Atvērt navigācijas izvēlni">Izvēlne</summary>
+          <nav class="mobile-links" aria-label="Mobilā navigācija">
+            <ul>
+              <li><a href="#par-vietu">Par vietu</a></li>
+              <li><a href="#iespejas">Iespējas</a></li>
+              <li><a href="#galerija">Galerija</a></li>
+              <li><a href="#ka-sazinaties">Kā sazināties</a></li>
+              <li><a href="#kontakti">Kontakti</a></li>
+            </ul>
+          </nav>
+        </details>
+      </div>
     </div>
   </header>
   <main id="saturs">
@@ -239,9 +329,9 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="hero-kicker">Dunalka, Dienvidkurzeme · Vēsturisks viesu nams</p>
-          <h1 id="hero-title">Svinību vieta ar <em>200 gadu</em> stāstu.</h1>
-          <p class="hero-lead">Vēsturiska lauku vide, kur tūrisma aprakstos minētas iespējas svinēt, nakšņot un pavadīt laiku pie dabas.</p>
-          <a class="cta" href="#kontakti">Uzzināt par pieejamību <span aria-hidden="true">↗</span></a>
+          <h1 id="hero-title">Svinības vēsturiskajā <em>Kalnmuižā.</em></h1>
+          <p class="hero-lead">Dunalkā, Dienvidkurzemē. Tūrisma katalogos minēta svinību zāle līdz 60 viesiem, nakšņošana un pirts.</p>
+          <a class="cta" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
           <p class="hero-footnote">Viesu nama pašreizējā darbība un pakalpojumi vēl jāapstiprina.</p>
         </div>
       </div>
@@ -252,7 +342,7 @@
       <div class="about-label"><span class="eyebrow">Par Kalnmuižu</span><span class="small-rule" aria-hidden="true"></span></div>
       <div class="about-copy">
         <h2 class="heading" id="about-title">200 gadu vēsture Dunalkas laukos</h2>
-        <p class="body-copy">Kalnmuiža tūrisma katalogos aprakstīta kā aptuveni 200 gadu sena, atjaunota ēka bioloģiskās saimniecības teritorijā. Tā ir vieta ar savu vēsturi un reiz piedāvātām iespējām pulcēties, svinēt un palikt pa nakti.</p>
+        <p class="body-copy">Kalnmuiža ir aptuveni 200 gadu sena ēka Dunalkas pagastā. Tūrisma katalogi to apraksta kā vietu privātām svinībām un nakšņošanai bioloģiskās saimniecības teritorijā.</p>
         <div class="stats">
           <div class="stat"><strong>60</strong><span>viesiem paredzēta svinību zāle katalogos</span></div>
           <div class="stat"><strong>7</strong><span>viesu istabas vēsturiskajā aprakstā</span></div>
@@ -276,7 +366,7 @@
           <div class="feature-copy">
             <span class="feature-number">01 / Svinībām</span>
             <h3 id="celebrate-title">Telpa svētkiem un kopā būšanai</h3>
-            <p>Tūrisma aprakstos minēta svinību zāle līdz 60 viesiem, kas iepriekš piedāvāta kāzām, jubilejām un privātiem pasākumiem.</p>
+            <p>Katalogos norādīta zāle līdz 60 viesiem kāzām, jubilejām un privātiem pasākumiem. Aktuālo ietilpību un nosacījumus vēl jāprecizē.</p>
             <a class="detail-link" href="#kontakti">Precizēt svinību iespējas <span aria-hidden="true">↗</span></a>
           </div>
         </article>
@@ -288,7 +378,7 @@
           <div class="feature-copy">
             <span class="feature-number">02 / Nakšņošanai</span>
             <h3 id="stay-title">Palikt ilgāk nekā vienu vakaru</h3>
-            <p>Vecākos viesu nama aprakstos minētas septiņas istabas. Aktuālais istabu un guļvietu skaits nav apstiprināts.</p>
+            <p>Publicētajos aprakstos norādītas septiņas istabas, lai viesi varētu palikt pēc svinībām. Pieejamība un guļvietu skaits šobrīd nav apstiprināts.</p>
             <a class="detail-link" href="#kontakti">Jautāt par nakšņošanu <span aria-hidden="true">↗</span></a>
           </div>
         </article>
@@ -297,13 +387,30 @@
           <div class="feature-copy">
             <span class="feature-number">03 / Atpūtai</span>
             <h3 id="nature-title">Pirts un laiks pie dabas</h3>
-            <p>Publiskajos katalogos minēta pirts, dīķis un atpūta teritorijā. Pirms plānot viesošanos, nepieciešams noskaidrot, kuras iespējas pieejamas šobrīd.</p>
+            <p>Katalogos aprakstīta pirts, dīķis un atpūta teritorijā. Par to pašreizējo pieejamību jājautā saimniekiem.</p>
             <a class="detail-link" href="#kontakti">Sazināties par atpūtu <span aria-hidden="true">↗</span></a>
           </div>
           <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas teritorijas vai pirts fotogrāfijai">
             <span class="placeholder">Teritorijas vai pirts fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 03</span>
           </div>
         </article>
+      </div>
+    </section>
+
+
+    <section class="section how" id="ka-sazinaties" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="how-intro">
+          <span class="eyebrow">Sazināšanās</span>
+          <h2 class="heading" id="how-title">Kā noskaidrot pieejamību?</h2>
+          <p>Vienkārši trīs soļi, lai noskaidrotu, vai vieta ir piemērota plānotajam pasākumam.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="step-index" aria-hidden="true">01</span><strong>Piezvani</strong><p>Izmanto tūrisma katalogā norādīto tālruni.</p></li>
+          <li><span class="step-index" aria-hidden="true">02</span><strong>Pastāsti par ieceri</strong><p>Norādi vēlamo datumu, viesu skaitu un vajadzīgās iespējas.</p></li>
+          <li><span class="step-index" aria-hidden="true">03</span><strong>Precizē detaļas</strong><p>Noskaidro, vai pakalpojums pieejams, kāda ir cena un nosacījumi.</p></li>
+        </ol>
+        <a class="detail-link" href="tel:+37129824636">Zvanīt +371 29824636 <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -318,6 +425,20 @@
         <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts apkārtnes foto</span><figcaption>Apkārtne</figcaption></figure>
       </div>
       <p class="gallery-fine">Demo izmanto tekstuālus attēlu vietturus, nevis stock vai AI ģenerētas viesu nama fotogrāfijas.</p>
+    </section>
+
+
+    <section class="section faq" id="jautajumi" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-heading"><span class="eyebrow">Pirms sazināšanās</span><h2 class="heading" id="faq-title">Biežākie jautājumi</h2><p>Atbildes balstītas tūrisma katalogu ierakstos. Pašreizējo darbības statusu un nosacījumus vajag apstiprināt ar saimniekiem.</p></div>
+        <div class="faq-list">
+          <details><summary>Vai Kalnmuiža pašlaik pieņem rezervācijas?</summary><p>To nav izdevies neatkarīgi apstiprināt. Pirms pasākuma plānošanas sazinies pa norādīto tālruni.</p></details>
+          <details><summary>Cik viesu varēja uzņemt svinību zālē?</summary><p>Publiskajos katalogos norādīta zāle līdz 60 viesiem. Aktuālā ietilpība jāprecizē.</p></details>
+          <details><summary>Vai iespējama nakšņošana?</summary><p>Vēsturiskajos aprakstos minētas septiņas istabas. Guļvietu skaits katalogos atšķiras, tāpēc to un pašreizējo pieejamību nepieciešams noskaidrot.</p></details>
+          <details><summary>Cik maksā svinību zāles un viesu nama īre?</summary><p>Dažos tūrisma katalogos publicētas cenas, bet to aktualitāte nav apstiprināta. Par cenu, iespējamo īres ilgumu un nosacījumiem jājautā saimniekiem.</p></details>
+          <details><summary>Kur atrodas Kalnmuiža?</summary><p>Dunalkas pagastā, Dienvidkurzemes novadā. <a href="https://www.google.com/maps/search/?api=1&amp;query=Kalnmui%C5%BEa%20Dunalkas%20pagasts" target="_blank" rel="noopener noreferrer">Atvērt atrašanās vietas meklējumu kartē ↗</a></p></details>
+        </div>
+      </div>
     </section>
 
     <section class="section where" aria-labelledby="where-title">
@@ -338,20 +459,42 @@
           <div>
             <span class="eyebrow">Saziņa</span>
             <h2 class="heading" id="contact-title">Uzzini par Kalnmuižas pašreizējo pieejamību</h2>
-            <p>Šī ir neoficiāla dizaina demonstrācija. Lai noskaidrotu, vai viesu nams šobrīd darbojas un kādi pakalpojumi ir pieejami, sazinies pa publiski norādīto tālruni.</p>
+            <p>Šis ir neoficiāls dizaina demo. Lai uzzinātu, vai viesu nams šobrīd darbojas un kas pieejams, izmanto tūrisma katalogos norādīto tālruni.</p>
           </div>
           <div class="contact-way">
+            <a class="contact-primary" href="tel:+37129824636">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
             <a class="phone" href="tel:+37129824636" aria-label="Zvanīt uz +371 29824636">+371 29824636 ↗</a>
             <a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Kalnmuiža Facebook ↗</a>
             <small>Netiek piedāvāta rezervācijas forma, cenas vai neapstiprināti pieejamības datumi.</small>
           </div>
         </div>
         <footer class="footer">
-          <span>Kalnmuiža · Neoficiāls mājaslapas dizaina koncepts</span>
-          <span><a href="https://www.dienvidkurzeme.travel/visainfo/item/svinibu-vietas/svinibu-vietas-1/viesu-nams-kalnmuiza-6/" target="_blank" rel="noopener noreferrer">Tūrisma informācijas avots ↗</a></span>
+          <div class="footer-brand"><strong>Kalnmuiža</strong><span>Viesu nams Dunalkā · Neoficiāls mājaslapas dizaina koncepts</span></div>
+          <nav class="footer-nav" aria-label="Kājenes navigācija">
+            <ul><li><a href="#par-vietu">Par vietu</a></li><li><a href="#iespejas">Iespējas</a></li><li><a href="#galerija">Galerija</a></li><li><a href="#kontakti">Kontakti</a></li></ul>
+          </nav>
+          <div class="footer-info"><a href="tel:+37129824636">+371 29824636</a><span>Kalnmuiža, Dunalkas pagasts</span><a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div>
         </footer>
+        <div class="legal-row"><span>© 2026 · Tikai dizaina demonstrācijai · Nekas nav apstiprināts kā oficiāls piedāvājums</span><a href="https://www.dienvidkurzeme.travel/visainfo/item/svinibu-vietas/svinibu-vietas-1/viesu-nams-kalnmuiza-6/" target="_blank" rel="noopener noreferrer">Informācijas avots ↗</a></div>
       </div>
     </section>
   </main>
+
+<script>
+  (() => {
+    const menu = document.querySelector('.menu');
+    if (!menu) return;
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+  })();
+</script>
 </body>
 </html>
