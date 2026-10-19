@@ -218,46 +218,96 @@
 
 .feature-more {margin-top:var(--s6);}
 
-/* Svinibu detail — project-specific additions on the shared KESTREL system. */
-.event-hero {background:var(--paper);padding-block:var(--section-pad);}
-.event-hero-grid {display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:var(--s16);align-items:center;}
-.event-intro {max-width:610px;}
-.event-intro .eyebrow {display:block;margin-bottom:var(--s6);}
-.event-intro h1 {font:400 var(--h1)/1.1 var(--serif);letter-spacing:-.045em;max-width:650px;text-wrap:balance;}
-.event-lead {max-width:34ch;margin-top:var(--s6);font-size:var(--body);line-height:1.65;color:var(--muted);}
-.event-intro .cta {margin-top:var(--s8);background:var(--brown);color:var(--paper);}
-.event-intro .cta:hover {background:var(--ink);}
-.event-location {margin-top:var(--s8);font-size:var(--secondary);color:var(--muted);}
-.event-media {position:relative;min-width:0;aspect-ratio:1/1.04;background:#d1c1ae;overflow:hidden;}
-.event-media-label {position:absolute;bottom:var(--s8);left:var(--s8);right:var(--s8);display:flex;flex-direction:column;gap:var(--s2);color:#56483b;}
-.event-media-label strong {font:400 var(--h3)/1.15 var(--serif);letter-spacing:-.025em;}
-.event-media-label span {font-size:var(--label);line-height:1.5;}
-.event-facts {background:var(--cream);}
-.event-facts-grid {display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--s16);}
-.event-facts-head .eyebrow {display:block;margin-bottom:var(--s3);}
-.event-facts .heading {max-width:370px;}
-.event-facts-content {min-width:0;}
-.event-fact {border-top:1px solid var(--line);padding:var(--s6) 0;display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:var(--s8);}
-.event-fact:nth-of-type(2) {border-bottom:1px solid var(--line);}
-.event-fact h3 {font:400 var(--h3)/1.2 var(--serif);letter-spacing:-.025em;}
-.event-fact p {max-width:48ch;font-size:var(--body);line-height:1.65;color:var(--muted);}
-.event-source-note {margin-top:var(--s4);font-size:var(--label);line-height:1.6;color:var(--muted);}
-.event-source-note a {text-decoration:underline;text-underline-offset:3px;}
-.event-inquiry {max-width:50ch;margin-top:var(--s8);font-size:var(--secondary);line-height:1.7;color:var(--muted);}
-.detail-header-current {border-bottom:1px solid var(--ink)!important;}
-@media(max-width:1120px) {.event-hero-grid {gap:var(--s12);}}
+/* Svinības — KARLE editorial principles, Kalnmuiža's own warm historical identity.
+   Full-width photography-led composition (honest placeholder until licensed photos),
+   quiet information strip, alternating large editorial layouts. No cards or gimmicks. */
+.celebration-hero {
+  position:relative; display:flex; align-items:flex-end;
+  min-height:clamp(540px,76svh,780px);
+  background:#4a4239; color:var(--paper); overflow:hidden;
+}
+.celebration-hero-inner {
+  position:relative;display:flex;align-items:flex-end;justify-content:space-between;
+  width:100%;gap:var(--s16);padding-top:var(--s30);padding-bottom:var(--s24);
+}
+.celebration-hero-content {max-width:800px;}
+.celebration-hero .eyebrow {display:block;margin-bottom:var(--s6);color:#e1d5c5;letter-spacing:.09em;text-transform:uppercase;}
+.celebration-hero h1 {
+  max-width:760px;font:400 var(--h1)/1.1 var(--serif);letter-spacing:-.045em;
+  text-wrap:balance;
+}
+.celebration-hero .celebration-cta {
+  display:inline-flex;align-items:center;justify-content:space-between;
+  min-height:52px;gap:var(--s8);margin-top:var(--s10);
+  padding:var(--s3) var(--s6);border:1px solid #eee3d4;
+  font-size:var(--secondary);font-weight:500;color:#fffaf1;
+  transition:color .18s,background .18s;
+}
+.celebration-hero .celebration-cta:hover {background:#f5f1ea;color:var(--ink);}
+.celebration-hero .celebration-cta:focus-visible {outline:2px solid #fffaf1;outline-offset:4px;}
+.celebration-photo-label {
+  flex:0 0 205px;max-width:205px;align-self:flex-end;
+  padding-bottom:var(--s1);font-size:var(--label);line-height:1.5;text-align:right;color:#ddd0bf;
+}
+.celebration-photo-label strong {
+  display:block;margin-bottom:var(--s1);font-size:var(--label);
+  font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+}
+/* Only verified generic categories; do not imply unconfirmed booking facilities. */
+.celebration-strip {background:var(--cream);border-bottom:1px solid var(--line);}
+.celebration-strip-inner {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6);align-items:center;padding-top:var(--s6);padding-bottom:var(--s6);}
+.celebration-strip span {font-size:var(--secondary);line-height:1.5;color:var(--muted);}
+.celebration-strip span:not(:first-child) {padding-left:var(--s6);border-left:1px solid var(--line);}
+
+.celebration-spaces {background:var(--paper);}
+.celebration-spaces-head {margin-bottom:var(--s16);}
+.celebration-spaces-head .eyebrow {display:block;margin-bottom:var(--s3);}
+.celebration-spaces-head .heading {max-width:720px;}
+.celebration-showcase {border-top:1px solid var(--line);}
+.celebration-row {
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:var(--s16);align-items:center;padding:var(--s10) 0;
+  border-bottom:1px solid var(--line);
+}
+.celebration-row--reverse {grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);}
+.celebration-row--reverse .celebration-image {grid-column:2;grid-row:1;}
+.celebration-row--reverse .celebration-copy {grid-column:1;grid-row:1;}
+.celebration-image {
+  position:relative;aspect-ratio:1.55;overflow:hidden;min-width:0;
+  background:#cec0af;
+}
+.celebration-row--reverse .celebration-image {aspect-ratio:1.48;background:#c9c3b8;}
+.celebration-image-note {
+  position:absolute;bottom:var(--s6);left:var(--s6);
+  max-width:calc(100% - 48px);font-size:var(--label);
+  line-height:1.5;color:#564a3e;
+}
+.celebration-copy {max-width:460px;}
+.celebration-copy h3 {font:400 var(--h3)/1.2 var(--serif);letter-spacing:-.025em;margin-bottom:var(--s4);}
+.celebration-copy p {font-size:var(--body);line-height:1.65;max-width:48ch;color:var(--muted);}
+.celebration-source {margin-top:var(--s6);font-size:var(--label);line-height:1.65;color:var(--muted);}
+.celebration-source a {text-decoration:underline;text-underline-offset:4px;}
+
+@media(max-width:1024px) {
+  .celebration-hero-inner {gap:var(--s8);}
+  .celebration-row,.celebration-row--reverse {gap:var(--s12);}
+}
 @media(max-width:860px) {
-  .event-hero-grid,.event-facts-grid {grid-template-columns:1fr;gap:var(--s8);}
-  .event-media {aspect-ratio:1.65;}
-  .event-intro {max-width:760px;}
+  .celebration-row,.celebration-row--reverse {grid-template-columns:1fr;gap:var(--s6);}
+  .celebration-row--reverse .celebration-image,.celebration-row--reverse .celebration-copy {grid-column:auto;grid-row:auto;}
+  .celebration-image,.celebration-row--reverse .celebration-image {aspect-ratio:1.6;}
+  .celebration-copy {max-width:640px;}
 }
 @media(max-width:760px) {
-  .event-intro .eyebrow {margin-bottom:var(--s4);}
-  .event-lead {margin-top:var(--s4);}
-  .event-intro .cta {margin-top:var(--s6);}
-  .event-location {margin-top:var(--s6);}
-  .event-media {aspect-ratio:1.35;}
-  .event-media-label {bottom:var(--s6);left:var(--s6);}
-  .event-facts-grid {gap:var(--s6);}
-  .event-fact {grid-template-columns:1fr;gap:var(--s2);padding:var(--s6) 0;}
+  .celebration-hero {min-height:0;}
+  .celebration-hero-inner {display:block;padding-top:var(--s30);padding-bottom:var(--s16);}
+  .celebration-hero .eyebrow {margin-bottom:var(--s4);}
+  .celebration-hero .celebration-cta {margin-top:var(--s8);}
+  .celebration-photo-label {max-width:none;margin-top:var(--s24);text-align:left;}
+  .celebration-photo-label strong {display:inline;margin-right:var(--s2);}
+  .celebration-strip-inner {grid-template-columns:1fr;gap:var(--s3);padding-block:var(--s6);}
+  .celebration-strip span:not(:first-child) {padding-left:0;border-left:0;}
+  .celebration-spaces-head {margin-bottom:var(--s8);}
+  .celebration-row,.celebration-row--reverse {padding:var(--s6) 0;gap:var(--s6);}
+  .celebration-image,.celebration-row--reverse .celebration-image {aspect-ratio:1.33;}
 }
