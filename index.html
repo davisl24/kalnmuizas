@@ -284,6 +284,37 @@
       .footer {gap:28px 12px;}
     }
 
+
+    /* Visual refinement 01 — editorial rhythm and honest, uncluttered photo placeholders. */
+    .hero::after { display:none; }
+    .hero-copy { max-width:800px; }
+    .hero h1 { max-width:850px; line-height:1.045; letter-spacing:-.055em; }
+    .hero-lead { max-width:455px; font-size:16px; line-height:1.78; margin-bottom:36px; }
+    .hero-photo-label {max-width:260px; color:#efe4d7;}
+    .hero-photo-label span {letter-spacing:.08em; font-size:10px;}
+    .places-head { margin-bottom:clamp(45px,6vw,84px); }
+    .feature-media,.gallery-photo {border:0;}
+    .placeholder { padding:30px; max-width:300px; font-size:13px; line-height:1.65; text-align:center; color:#66584b; letter-spacing:.01em; }
+    .placeholder::before,.feature-media::after,.gallery-photo::after {display:none;}
+    .feature-copy {max-width:520px;}
+    .feature-copy h3 {letter-spacing:-.045em;}
+    .gallery-grid { gap:12px; }
+    .gallery-photo figcaption {font-size:12px;font-weight:500;letter-spacing:.01em;}
+    @media(max-width:760px) {
+      .hero {display:block;min-height:0;}
+      .hero-inner {padding-top:85px;padding-bottom:62px;}
+      .hero h1 {max-width:580px;font-size:clamp(49px,10vw,69px);line-height:1.08;}
+      .hero-lead {margin-bottom:27px;}
+      .hero-photo-label {position:static;margin:0;padding:0 var(--page-pad) 26px;max-width:none;font-size:11px;line-height:1.55;}
+      .hero-photo-label span {display:inline;margin-right:9px;}
+      .feature-media,.feature--reversed .feature-media {aspect-ratio:1.33;}
+      .gallery-grid {gap:10px;}
+    }
+    @media(max-width:420px) {
+      .hero h1 {font-size:clamp(43px,11.6vw,49px);line-height:1.09;}
+      .hero-inner {padding-top:75px;padding-bottom:46px;}
+      .hero-lead {font-size:15px;}
+    }
   </style>
 </head>
 <body>
@@ -329,10 +360,9 @@
           <h1 id="hero-title">Svinības vēsturiskajā <em>Kalnmuižā.</em></h1>
           <p class="hero-lead">Dunalkā, Dienvidkurzemē. Tūrisma katalogos minēta svinību zāle līdz 60 viesiem, nakšņošana un pirts.</p>
           <a class="cta" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
-          <p class="hero-footnote">Pirms pasākuma rezervēšanas precizē brīvos datumus un pakalpojumu nosacījumus.</p>
         </div>
       </div>
-      <div class="hero-photo-label"><span>Foto vieta / 01</span>Šeit paredzēta aktuāla Kalnmuižas fotogrāfija ar publicēšanas atļauju.</div>
+      <div class="hero-photo-label"><span>Kalnmuižas foto</span>Vieta aktuālai, saskaņotai ēkas fotogrāfijai.</div>
     </section>
 
     <section class="section wrap about" id="par-vietu" aria-labelledby="about-title">
@@ -353,7 +383,7 @@
       <div class="wrap">
         <div class="places-head">
           <div><span class="eyebrow">Vietas iespējas</span><h2 class="heading" id="places-title">Svinības, nakšņošana un atpūta</h2></div>
-          <p>Svinību zāle, nakšņošana un atpūtas iespējas — iepazīsti piedāvājumu un noskaidro sev vajadzīgos nosacījumus.</p>
+          <p>Vieta svinībām, iespēja palikt pa nakti un laiks atpūtai ārpus pilsētas.</p>
         </div>
 
         <article class="feature" aria-labelledby="celebrate-title">
@@ -414,14 +444,14 @@
     <section class="section wrap" id="galerija" aria-labelledby="gallery-title">
       <div class="gallery-head">
         <div><span class="eyebrow">Galerija</span><h2 class="heading" id="gallery-title">Kalnmuiža tuvplānā</h2></div>
-        <p>Šeit paredzētas tikai reālas, aktuālas vietas fotogrāfijas. Attēlu tiesības vēl nav apstiprinātas.</p>
+        <p>Ēka, telpas un apkārtne — galeriju papildināsim ar vietas aktuālajām fotogrāfijām.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts aktuāls ēkas vai zāles foto</span><figcaption>Ēka un svinību zāle</figcaption></figure>
         <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts istabu foto</span><figcaption>Nakšņošana</figcaption></figure>
         <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts apkārtnes foto</span><figcaption>Apkārtne</figcaption></figure>
       </div>
-      <p class="gallery-fine">Demo izmanto tekstuālus attēlu vietturus, nevis stock vai AI ģenerētas viesu nama fotogrāfijas.</p>
+      <p class="gallery-fine">Fotogrāfiju vietturi. Oriģinālos attēlus pievienosim pēc saskaņošanas.</p>
     </section>
 
 
