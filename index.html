@@ -7,6 +7,9 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="description" content="Kalnmuiža Dunalkā — viesu nama mājaslapas dizaina demo. Pakalpojumu nosacījumi un cenas vēl jāsaskaņo.">
   <title>Kalnmuiža | Svinību vieta Dunalkā — Dizaina demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,8 +18,7 @@
   <header class="header" id="lapas-augsa">
     <div class="wrap header-in">
       <a class="brand" href="#sakums" aria-label="Kalnmuiža — uz sākumu">
-        <span class="brand-sign" aria-hidden="true">K</span>
-        <span class="brand-text"><strong>Kalnmuiža</strong><small>Viesu nams · Dunalka</small></span>
+        <span class="brand-wordmark">Kalnmuiža</span>
       </a>
       <nav class="header-nav" aria-label="Galvenā navigācija">
         <ul>
@@ -47,18 +49,25 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="hero-kicker">Dunalka, Dienvidkurzeme · Vēsturisks viesu nams</p>
-          <h1 id="hero-title">Svinības vēsturiskajā <em>Kalnmuižā</em></h1>
+          <h1 id="hero-title">Svinības vēsturiskajā Kalnmuižā</h1>
           <a class="cta" href="#kontakti">Jautāt par pieejamību <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div class="hero-photo-label"><span>Kalnmuižas foto</span>Vieta aktuālai, saskaņotai ēkas fotogrāfijai.</div>
     </section>
 
-    <section class="section wrap about" id="par-vietu" aria-labelledby="about-title">
-      <div class="about-label"><span class="eyebrow">Par Kalnmuižu</span></div>
-      <div class="about-copy">
-        <h2 class="heading" id="about-title">200 gadu vēsture Dunalkas laukos</h2>
-        <p class="body-copy">Vēsturiska viesu nama ēka Dunalkas pagastā, bioloģiskās saimniecības teritorijā.</p>
+    <section class="section about-section" id="par-vietu" aria-labelledby="about-title">
+      <div class="wrap about">
+        <div class="about-label">
+          <span class="eyebrow">Par Kalnmuižu</span>
+          <span class="about-region">Dunalka<br>Dienvidkurzeme</span>
+        </div>
+        <div class="about-copy">
+          <h2 class="heading" id="about-title">Vieta ar 200 gadu vēsturi</h2>
+          <p class="body-copy">Kalnmuiža ir atjaunota, aptuveni 200 gadus sena ēka Dunalkas pagastā, bioloģiskās saimniecības teritorijā.</p>
+          <p class="body-copy">Vieta svinībām, nakšņošanai un atpūtai ārpus pilsētas.</p>
+          <a class="detail-link about-link" href="svinibas.html">Iepazīt svinību iespējas <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
 
@@ -88,6 +97,7 @@
 
             <h3 id="stay-title">Nakšņošana uz vietas</h3>
             <p>Tūrisma aprakstos minētas septiņas istabas. Aktuālo pieejamību precizē, sazinoties.</p>
+            <a class="detail-link feature-more" href="#kontakti">Jautāt par nakšņošanu <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
@@ -96,6 +106,7 @@
 
             <h3 id="nature-title">Pirts un atpūta</h3>
             <p>Tūrisma katalogos minēta pirts un dīķis. Par pieejamību jautā saimniekiem.</p>
+            <a class="detail-link feature-more" href="#kontakti">Jautāt par pirti <span aria-hidden="true">↗</span></a>
           </div>
           <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas teritorijas vai pirts fotogrāfijai">
             <span class="placeholder"><strong>Atpūta dabā</strong><small>Fotogrāfija pēc saskaņošanas</small></span>
@@ -110,42 +121,52 @@
           <span class="eyebrow">Atrašanās vieta</span>
           <h2 class="heading" id="where-title">Dunalka, Dienvidkurzeme</h2>
           <p class="where-description">“Kalnmuiža”, Dunalkas pagasts, Dienvidkurzemes novads.</p>
-          <a class="detail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kalnmui%C5%BEa%20Dunalkas%20pagasts" target="_blank" rel="noopener noreferrer">Atvērt Google Maps <span aria-hidden="true">↗</span></a>
+          <a class="detail-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=56.6821363853466%2C21.352693304387003" target="_blank" rel="noopener noreferrer">Skatīt maršrutu Google Maps <span aria-hidden="true">↗</span></a>
         </div>
         <div class="where-map">
           <div class="where-map-frame">
-            <iframe title="Kalnmuižas meklējums Dunalkas pagastā Google Maps"
-              src="https://maps.google.com/maps?q=Kalnmui%C5%BEa%2C%20Dunalkas%20pagasts%2C%20Dienvidkurzemes%20novads%2C%20Latvija&amp;z=13&amp;output=embed"
+            <iframe title="Kalnmuižas atrašanās vieta pēc viesu namu kataloga maršruta koordinātām"
+              src="https://maps.google.com/maps?q=56.6821363853466%2C21.352693304387003&amp;z=15&amp;output=embed"
               loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
-          <p class="where-map-note">Kartē redzams vietas meklējums; precīza adrese vēl jāsaskaņo.</p>
+          <p class="where-map-note">Maršruta norāde no publiska viesu namu kataloga. Pirms brauciena ieteicams precizēt piebraukšanu.</p>
         </div>
       </div>
     </section>
 
     <section class="contact" id="kontakti" aria-labelledby="contact-title">
-      <div class="wrap">
-        <div class="contact-grid">
-          <div>
-            <span class="eyebrow">Saziņa</span>
-            <h2 class="heading" id="contact-title">Plāno svinības Kalnmuižā?</h2>
-            <p>Par brīvajiem datumiem un cenām jautā pa tālruni.</p>
-          </div>
-          <div class="contact-way">
-            <a class="phone" href="tel:+37129824636" aria-label="Zvanīt uz +371 29824636">+371 29824636 ↗</a>
-            <a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Kalnmuiža Facebook ↗</a>
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <span class="eyebrow">Kontakti</span>
+          <h2 class="heading" id="contact-title">Sazinies par pieejamību</h2>
+          <p>Par brīvajiem datumiem, viesu skaitu un nosacījumiem sazinies tieši ar Kalnmuižu.</p>
+        </div>
+        <div class="contact-way">
+          <span class="contact-label">Tālrunis</span>
+          <a class="phone" href="tel:+37129824636" aria-label="Zvanīt uz +371 29824636">+371 29824636 <span aria-hidden="true">↗</span></a>
+          <div class="contact-secondary">
+            <a href="mailto:kalnamuizadunalka@inbox.lv">Rakstīt e-pastu ↗</a>
+            <a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
           </div>
         </div>
-        <footer class="footer">
-          <div class="footer-brand"><strong>Kalnmuiža</strong><span>Viesu nams Dunalkā · Neoficiāls mājaslapas dizaina koncepts</span></div>
-          <nav class="footer-nav" aria-label="Kājenes navigācija">
-            <ul><li><a href="#par-vietu">Par vietu</a></li><li><a href="svinibas.html">Svinības</a></li><li><a href="#iespejas">Iespējas</a></li><li><a href="#kontakti">Kontakti</a></li></ul>
-          </nav>
-          <div class="footer-info"><a href="tel:+37129824636">+371 29824636</a><span>Kalnmuiža, Dunalkas pagasts</span><a href="https://www.facebook.com/Kalnmuiza" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div>
-        </footer>
-        <div class="legal-row"><span>© 2026 · Tikai dizaina demonstrācijai · Nekas nav apstiprināts kā oficiāls piedāvājums</span><a href="https://www.dienvidkurzeme.travel/visainfo/item/svinibu-vietas/svinibu-vietas-1/viesu-nams-kalnmuiza-6/" target="_blank" rel="noopener noreferrer">Informācijas avots ↗</a></div>
       </div>
     </section>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer">
+          <div class="footer-brand"><strong>Kalnmuiža</strong><span>Dunalkas pagasts, Dienvidkurzemes novads</span></div>
+          <nav class="footer-nav" aria-label="Kājenes navigācija">
+            <ul><li><a href="#sakums">Sākums</a></li><li><a href="svinibas.html">Svinības</a></li><li><a href="#iespejas">Iespējas</a></li><li><a href="#par-vietu">Par vietu</a></li></ul>
+          </nav>
+          <div class="footer-info">
+            <a href="tel:+37129824636">+371 29824636</a>
+            <a href="mailto:kalnamuizadunalka@inbox.lv">kalnamuizadunalka@inbox.lv</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=56.6821363853466%2C21.352693304387003" target="_blank" rel="noopener noreferrer">Atrašanās vieta ↗</a>
+          </div>
+        </div>
+        <div class="legal-row"><span>© 2026 · Neoficiāls dizaina demo. Piedāvājums un materiāli vēl jāsaskaņo.</span><a href="https://www.dienvidkurzeme.travel/visainfo/item/aizputes-apkartne/naktsmitnes-aizpute/viesu-nams-kalnmuiza-3/" target="_blank" rel="noopener noreferrer">Informācijas avots ↗</a></div>
+      </div>
+    </footer>
   </main>
 
 <script>
