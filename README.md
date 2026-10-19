@@ -3,6 +3,18 @@
 **Aktīvais zars:** `main`  
 **Statuss:** dizaina sistēma izstrādāta, **vizuālā desktop/mobile QA vēl nav apstiprināta**.
 
+## Jaunā iekšlapa — darba zars
+Pārskatām `feature/svinibas-page-v1` (vēl **nav** apvienots ar `main`). Tajā ir `svinibas.html` un viens kopīgs `styles.css` sākumlapai un iekšlapai. Nākamie plānotie skati — nakšņošana un kontakti — **vēl nav izstrādāti**.
+
+No esošās projekta mapes:
+
+```bash
+git fetch origin
+git switch --track origin/feature/svinibas-page-v1
+```
+
+Atver `svinibas.html` ar Live Server (vai `http://127.0.0.1:5501/svinibas.html`, ja šī ir tava Live Server adrese). Lai atgrieztos pie esošā demo: `git switch main`.
+
 ## Lokāla apskate
 Esošā projekta mapē: `git pull origin main`. Atver `index.html` VS Code Live Server, vai palaid `py -m http.server 3000` un apskati `http://localhost:3000`.
 
