@@ -224,16 +224,6 @@
     .mobile-links ul,.footer-nav ul {list-style:none;margin:0;padding:0;}
     .mobile-links a {display:block;}
     .header-nav a:focus-visible,.mobile-call:focus-visible,.cta:focus-visible,.detail-link:focus-visible,.contact-primary:focus-visible,.footer a:focus-visible {outline:2px solid #c39f75;outline-offset:4px;}
-    .how {background:#eae3d9;}
-    .how-intro {display:grid;grid-template-columns:.26fr 1fr;gap:24px 70px;align-items:baseline;}
-    .how-intro .heading {margin:0;}
-    .how-intro p {grid-column:2;max-width:650px;margin:0;color:var(--muted);font-size:15px;}
-    .steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;padding:0;margin:55px 0 36px;border-top:1px solid #c8bbae;border-bottom:1px solid #c8bbae;}
-    .steps li {padding:28px 28px 36px 0;min-width:0;}
-    .steps li + li {border-left:1px solid #c8bbae;padding-left:28px;}
-    .step-index {display:block;color:#826e5a;font-size:12px;margin-bottom:21px;}
-    .steps strong {display:block;font:400 clamp(23px,2.35vw,34px)/1.25 var(--serif);margin-bottom:11px;}
-    .steps p {color:var(--muted);font-size:14px;margin:0;line-height:1.75;}
     .faq {background:var(--cream);}
     .faq-grid {display:grid;grid-template-columns:.84fr 1.16fr;gap:clamp(38px,7vw,115px);}
     .faq-heading .heading {margin:14px 0 21px;}
@@ -263,13 +253,8 @@
       .menu {display:block;}
     }
     @media(max-width:760px) {
-      .how-intro,.faq-grid {display:block;}
-      .how-intro .heading,.faq-heading .heading {margin:13px 0 18px;}
-      .how-intro p {max-width:620px;}
-      .steps {grid-template-columns:1fr;gap:0;margin-top:32px;}
-      .steps li,.steps li + li {padding:21px 0;border-left:0;}
-      .steps li + li {border-top:1px solid #c8bbae;}
-      .step-index {margin-bottom:8px;}
+      .faq-grid {display:block;}
+      .faq-heading .heading {margin:13px 0 18px;}
       .faq-heading {margin-bottom:30px;}
       .faq-list summary {font-size:19px;}
       .footer {grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 20px;}
