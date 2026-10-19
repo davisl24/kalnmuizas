@@ -256,11 +256,8 @@
     .footer-info {font-size:13px;line-height:1.65;}
     .legal-row {border-top:1px solid #685c50;display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:18px;margin-top:36px;color:#b8afa4;font-size:11px;line-height:1.65;}
     .legal-row a {white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}
-    @media(max-width:1060px) {
-      .header-nav ul {gap:15px;}
-      .header-nav .header-phone {display:none;}
-    }
-    @media(max-width:930px) {
+    /* At tablet widths the visible call control replaces desktop navigation. */
+    @media(max-width:1120px) {
       .header-nav {display:none;}
       .mobile-actions {display:flex;}
       .menu {display:block;}
