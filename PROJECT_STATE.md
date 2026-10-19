@@ -7,6 +7,14 @@
 **Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
+## 2026-10-19 — KARLE virziens visai Kalnmuižas vietnei
+- **[LIETOTĀJA PRECIZĒJUMS]** KARLE projekta vizuālie principi attiecas uz **visu Kalnmuižas vietni**, nevis tikai `svinibas.html`.
+- **[BUILT, DARBA ZARĀ]** `index.html` un `svinibas.html` izmanto kopīgu `styles.css`, vienotu header/navigācijas/CTA sistēmu, full-width editorial Hero, pārdomātu tipogrāfiju un ritmu, lielas attēlu zonas un atbilstoši mainīgus satura izkārtojumus. Esošās atrašanās vietas/Google Maps un kontaktu sadaļas saglabātas.
+- **[KALNMUIŽAS IDENTITĀTE]** Vēsturiskās muižas, zemes toņu palete, Georgia tipogrāfija, cits satura uzsvars. KARLE repo ir kompozīcijas atsauce, nevis kopējams dizains vai foto avots.
+- **[LOCKED SAGLABĀTS]** Visual Direction v1.1 tipogrāfijas izmēri, 4/8 px spacing, 1280 px container, 96/64 px section padding. Neizdomājam foto, cenas, atsauksmes.
+- **[PROPOSED]** Jaunas iekšlapas (Nakšņošana, Kontakti) turpmāk būvējamas tajā pašā vizuālajā sistēmā, kad ir pietiekams saturs; šobrīd tās vēl nav izveidotas.
+- **[NOT TESTED]** Aktuālā darba zara desktop/mobile renderējums un lietotāja vizuālais apstiprinājums. `main` nav mainīts.
+
 ## 2026-10-19 — KARLE dizaina principu pielāgošana “Svinības” lapai
 - **[LIETOTĀJA VIRZIENS]** Patīk paša KARLE demo vizuālie principi. Precīzais avots: `davisl24/karle`, `index.html` (nevis publiskā karle.lv vietne).
 - **[PROPOSED / BUILT darba zarā]** Pārņemts: full-width Hero ar lielu Georgia virsrakstu un vienu CTA, smalka trīs informācijas vienību josla un pārmaiņus izvietoti lieli attēlu/teksta bloki.
