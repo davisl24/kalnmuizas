@@ -1,39 +1,25 @@
 # Kalnmuiža — Heritage Editorial demo
 
-**Repo:** `davisl24/kalnmuizas`  
-**Darba zars:** `demo/heritage-editorial-v1`  
-**Statuss:** uzlabots un saglabāts GitHub; **browser QA un klienta faktu/foto apstiprināšana vēl nav pabeigta**.
+**Aktīvais zars:** `main`  
+**Statuss:** dizaina sistēma izstrādāta, **vizuālā desktop/mobile QA vēl nav apstiprināta**.
 
-## Kā apskatīt demo
-Atver `index.html` no šī zara pārlūkā (lokāli vai HTML priekšskatītājā). HTML/CSS/niecīgs JS bez npm vai datubāzes. Lapa ir marķēta kā **neoficiāls demo** un satur `noindex,nofollow`.
+## Lokāla apskate
+Esošā projekta mapē: `git pull origin main`. Atver `index.html` VS Code Live Server, vai palaid `py -m http.server 3000` un apskati `http://localhost:3000`.
 
-## Dizaina virziens
-Apstiprinātais **Heritage Editorial**, izmantojot KARLE projekta pilna platuma Hero un mainīgu teksta/fotolaukumu izkārtojuma principu. Krāsas, saturs un struktūra piemērota Kalnmuižai, nevis kopēta no KARLE.
+Šī ir statiska HTML/CSS lapa ar nelielu JavaScript navigācijas izvēlnei. `npm install` nav vajadzīgs.
 
-## Pašreizējās sadaļas
-1. Pilna platuma Hero ar primāro CTA
-2. Par Kalnmuižu un vēsturiskā piedāvājuma skaitļi
-3. Svinību zāle, nakšņošana, pirts un daba
-4. Pieejamības precizēšanas process
-5. Galerija (tikai atļautu foto vietturi)
-6. FAQ (pārbaudīti avoti, neatrisinātie jautājumi atklāti marķēti)
-7. Atrašanās vieta
-8. Saziņa un footer
+## Dizaina lēmumi
+- Heritage Editorial, KARLE pilna platuma Hero kompozīcijas princips, oriģināla Kalnmuižas krāsu palete.
+- Georgia virsraksti, sans-serif pamatteksts; desktop H1 72 / H2 48 / H3 30 / body 16 px; mobile H1 40 / H2 32 / H3 24 / body 16 px.
+- 4/8 px spacing, 1280 px container, 40/20 px malas, 96/64 px sekciju padding.
+- Viena primārā darbība: **Jautāt par pieejamību**.
+- Vienas lapas sadaļas: Hero, Par vietu, Svinības/Nakšņošana/Atpūta, Atrašanās vieta, Kontakti. Nav tukšas galerijas, atkārtota FAQ vai izdomātu atsauksmju.
 
-## Drošība un robežas
-- **Nav izmantotas** svešas/stock/AI bildes, izdomātas atsauksmes vai aktuālu cenu solījumi.
-- Reālie foto būs jāsaņem no saimniekiem ar publicēšanas atļauju.
-- Lietotājs 2026-10-19 apstiprināja, ka viesu nams šobrīd darbojas. 2023. gadā notikušais ugunsgrēks ir vēsturisks fakts; pakalpojumu faktiskā pieejamība vēl jāsaskaņo.
-- Katalogos atšķiras guļvietu skaits un e-pasta rakstība; tāpēc nezināmā nav pasniegta kā fakts.
-- Bez kontaktu formas, analītikas vai mārketinga skriptiem. Tāpēc nav pievienots dekoratīvs sīkdatņu baneris.
-- Nekas netiek apvienots ar `main` vai publicēts kā oficiālā Kalnmuižas vietne bez atļaujas.
+## Demo robežas
+- `noindex,nofollow`, redzama neoficiālā demo norāde.
+- Īsto vietas foto tiesības nav pārbaudītas; izmantoti tikai marķēti vietturi.
+- Lietotājs apstiprināja, ka viesu nams darbojas, bet šodienas cenas, precīza ietilpība, atsevišķu pakalpojumu pieejamība un kontaktu aktualitāte vēl jāsaskaņo.
+- Pārnešana uz `main` paredzēta lokālai demo apskatei, nevis oficiālai publicēšanai.
+- Pirms LIVE nepieciešami faktiskie vizuālie, funkciju un avotu pārbaudes rezultāti.
 
-Detalizētas atzīmes un bloķējošie punkti ir [PROJECT_STATE.md](PROJECT_STATE.md).
-
-## Lokāli VS Code
-
-1. Klonē: `git clone https://github.com/davisl24/kalnmuizas.git`
-2. Atver mapi `kalnmuizas` VS Code.
-3. Atver `index.html` ar Live Server paplašinājumu vai terminalī palaid `python -m http.server 3000` un atver `http://localhost:3000`.
-
-Pirms oficiālas publiskas palaišanas pārbaudi foto atļaujas, faktiskos pakalpojumus un kontaktus. `main` izmantošana lokālai apskatei nav oficiāls production deploy.
+Aktuālie lēmumi un neatrisinātie jautājumi: [PROJECT_STATE.md](PROJECT_STATE.md).
