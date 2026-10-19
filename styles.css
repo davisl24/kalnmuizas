@@ -216,6 +216,8 @@
   }
 
 
+.feature-more {margin-top:var(--s6);}
+
 /* Svinibu detail — project-specific additions on the shared KESTREL system. */
 .event-hero {background:var(--paper);padding-block:var(--section-pad);}
 .event-hero-grid {display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:var(--s16);align-items:center;}
