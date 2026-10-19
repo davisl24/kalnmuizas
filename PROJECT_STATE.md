@@ -1,42 +1,56 @@
 # PROJECT STATE — Kalnmuiža demo
 
-**Atjaunināts:** 2026-10-19
-**Repo:** `davisl24/kalnmuizas`
-**Darba zars:** `demo/heritage-editorial-v1`
-**Statuss:** BUILT / BROWSER QA NOT TESTED / APPROVAL PENDING
-**Dizaina virziens:** A — Heritage Editorial (apstiprināts). 2026-10-19 apstiprināta KARLE pilna platuma Hero kompozīcijas principa pārnese.
+**Atjaunināts:** 2026-10-19  
+**Repo:** `davisl24/kalnmuizas`  
+**Darba zars:** `demo/heritage-editorial-v1`  
+**Statuss:** IMPLEMENTĒTS (saturs/UX) / BROWSER QA NAV VEIKTS / KLIENTA FAKTI JĀAPSTIPRINA  
+**Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
-## Apstiprinātais dizains
-- Viena lapa ar sešām galvenajām sadaļām: Hero; Par vietu; Iespējas (svinību zāle, nakšņošana, pirts un daba); Galerija; Atrašanās vieta; Kontakti.
-- Pilna platuma Hero (KARLE kompozīcijas princips), mainīgs attēlu/teksta ritms, lielas editorial fotolaukumu proporcijas; nevis KARLE dizaina vai satura kopija.
-- Silta, atturīga editorial tipogrāfija un krāsu sistēma.
-- Tikai īsti Kalnmuižas attēli ar atļauju; pašlaik ir tikai tekstuāli vietturi.
-- Bez neīstas rezervācijas sistēmas. Esošais CTA ir zvanīšanas saite ar skaidri nosauktu mērķi.
-- DEMO marķējums un `noindex,nofollow`; nekas nav publicēts kā oficiālā vietne.
+## Projektam piemērotais apjoms
+Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt potenciālajam pasākuma apmeklētājam saprast vietu un **precizēt pašreizējo pieejamību**. Neveidot vairākas lapas vai neīstu rezervāciju sistēmu bez pamatojuma.
 
-## GitHub izolācija
-Jaunais repozitorijs ir atsevišķs no Kestrel un citiem projektiem. `main` satur tikai README; demo atrodas darba zarā.
+## Ieviests 2026-10-19 pēc Website Guidelines
+- [x] Skaidrāks Hero virsraksts un piedāvājuma apraksts (Dunalka, svinību zāle, nakšņošana, pirts) ar katalogu datu atrunu.
+- [x] Sticky header un klikšķināms tālrunis; mobilajā/tabletē zvanīšanas CTA redzams ārpus izvēlnes.
+- [x] Semantiska `nav > ul > li` izvēlne un klaviatūras fokusa stili.
+- [x] Mobilās izvēlnes aizvēršana ar Escape, klikšķi ārpus izvēlnes un izvēloties saiti.
+- [x] Trīs reālistiski pieejamības precizēšanas soļi (nesolot atbildes laiku).
+- [x] Saīsināti, skaidrāki pakalpojumu apraksti.
+- [x] FAQ par darbības statusu, 60 viesu zāli, nakšņošanu, cenu nenoteiktību un atrašanās vietu.
+- [x] Vienota galvenā CTA formulēšana (Jautāt par pieejamību) un tiešās zvanīšanas iespējas.
+- [x] Footer ar navigāciju, telefonu, atrašanās vietu, Facebook un skaidru DEMO statusu.
+- [x] Statisks `noindex,nofollow` demo, bez analītikas, marketinga skriptiem un kontaktu formas.
+- [x] Bez stock/AI attēliem un bez izdomātām atsauksmēm, skaitļiem, cenām vai pieejamības datumiem.
 
-## Faktu riski un neatrisinātie jautājumi
-2023. gada ziņu publikācijā minēts ugunsgrēks Kalnmuižā Dunalkā. Vecākos tūrisma katalogos norādītā nakšņošana, zāles ietilpība un atpūtas iespējas nav automātiski spēkā šodien.
+## 2026-10-19 publisko avotu pārbaude
+- **Darbības statuss pēc 2023. gada ugunsgrēka:** nav neatkarīgi apstiprināts. Uzskatāms par būtisku bloķējošu faktu pirms oficiālas publicēšanas.
+- **Zāle:** katalogi min līdz 60 viesiem, bet pašreizējā ietilpība nav apstiprināta.
+- **Nakšņošana:** katalogi min 7 istabas; guļvietu skaits atšķiras: 35 un 39.
+- **Tālrunis:** +371 29824636 atkārtojas vairākos avotos; jāapstiprina pie saimniekiem.
+- **E-pasts:** avotos ir divi atšķirīgi varianti: `kalnmuizadunalka@inbox.lv` un `kalnamuizadunalka@inbox.lv`. Abi jāpārbauda; neviens netiek izvietots lapā.
+- **Cenas:** publicētas katalogos, bet šodienas aktualitāte nav zināma; netiek pasniegtas kā spēkā esošas.
+- **Fotogrāfijas:** reālu, aktuālu attēlu tiesības nav verificētas. Hero un galerijā saglabāti atklāti marķēti vietturi.
 
-Pirms atļaujas publicēt kā oficiālu vietni jānoskaidro:
-1. Vai viesu nams šobrīd darbojas un pieņem pasākumus?
-2. Vai zāle joprojām ir līdz 60 viesiem? Vai joprojām ir 7 istabas?
-3. Kuri kontakti un cenas ir aktuāli?
-4. Kurus aktuālos foto drīkst izmantot, un ar kādu atļauju?
+## Gatavības vārti
+### Pirms demo dizaina apstiprināšanas
+- [ ] Pārbaudīt faktiskos mobilos/desktop renderējumus: 320, 390, 768, 1120, 1440 px.
+- [ ] Pārbaudīt navigācijas klikšķus un tastatūras darbību ar Enter/Space/Esc, hover/focus un kontrastu.
+- [ ] Pārbaudīt iegūto HTML resursu ātrumu (bez attēliem); ar attēliem vēlāk mērīt Core Web Vitals.
+- [ ] Lietotāja vizuālais apstiprinājums.
 
-## Pārbaudes
-- [x] Statiskā HTML struktūra, navigācijas enkuri, UTF-8, LV, responsīvās CSS media queries (koda pārbaude no avota).
-- [x] 2026-10-19: atkārtota statiskā pārbaude: nav dublētu ID vai bojātu iekšējo enkuru, CSS iekavas sabalansētas, noindex saglabāts, nav ārējo attēlu vai skriptu.
-- [x] Nav ārējo skriptu, izsekošanas vai fiktīvu rezervācijas formu.
-- [x] GitHub darba zars, nošķirts no Kestrel.
-- [ ] Reāls desktop/mobile browser QA (320, 390, 768 un 1440 px).
-- [ ] Faktisko pakalpojumu apstiprinājums.
-- [ ] Foto atļaujas un attēlu izvietošana.
-- [ ] Lietotāja apstiprinājums pirms apvienošanas/publicēšanas.
+### Pirms reālas publicēšanas
+- [ ] Pārliecināties, ka viesu nams darbojas un ir gatavs jaunām rezervācijām.
+- [ ] Apstiprināt aktuālo zāles/istabu ietilpību, pakalpojumus, kontaktus un cenu nosacījumus.
+- [ ] Iegūt īpašnieka atļauju izmantot konkrētās aktuālās fotogrāfijas.
+- [ ] Ievietot optimizētus WebP/AVIF attēlus, korektus `alt` un lazy loading ārpus Hero.
+- [ ] Iegūt īstas atsauksmes, ja tādas drīkst izmantot; pretējā gadījumā atsauksmju sadaļu nelikt.
+- [ ] Pēc izvēlētā hostinga, reālās datu apstrādes un iesaistītā uzņēmuma datiem sagatavot atbilstošu privātuma informāciju. Sīkdatņu baneris vajadzīgs tikai atbilstoši reālajiem skriptiem/sīkdatnēm, nevis automātiski.
+- [ ] Tikai ar atļauju izņemt DEMO marķējumu un `noindex`, pielikt precīzus SEO meta/strukturētos datus un publicēt.
+- [ ] `main` nav jāmaina bez lietotāja apstiprinājuma.
 
-## Atsauces
-- https://www.dienvidkurzeme.travel/visainfo/item/svinibu-vietas/svinibu-vietas-1/viesu-nams-kalnmuiza-6/
-- https://www.facebook.com/Kalnmuiza
+## Galvenie avoti
+- https://www.dienvidkurzeme.travel/visainfo/item/aizputes-apkartne/naktsmitnes-aizpute/viesu-nams-kalnmuiza-3/
+- https://liepaja.travel/naktsmitnes/viesu-maja-kalnmuiza/
+- https://viesunamiem.lv/kalnmuiza
 - https://www.liepajniekiem.lv/zinas/novados/dunalkas-pagasta-kalnmuiza-cies-ugunsnelaime/
+- `Website-Guidelines(2).docx` (lietotāja iesniegtās darba vadlīnijas)
