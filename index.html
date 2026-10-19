@@ -300,6 +300,76 @@
       .hero-inner {padding-top:75px;padding-bottom:46px;}
       .hero-lead {font-size:15px;}
     }
+
+    /* Visual Direction & Review — first pass from the actual desktop screenshot.
+       Preserve the approved full-width hero, alternating features, and gallery.
+       Placeholder surfaces intentionally represent no real photographs. */
+    @media(min-width:761px) {
+      .hero {min-height:clamp(660px,76svh,870px);align-items:flex-end;background:#49433b;}
+      .hero-inner {padding-top:118px;padding-bottom:112px;}
+      .hero-copy {max-width:1080px;}
+      .hero h1 {max-width:1030px;font-size:clamp(75px,7.25vw,112px);line-height:1.055;letter-spacing:-.058em;margin-bottom:32px;}
+      .hero-lead {max-width:490px;font-size:17px;line-height:1.75;}
+      .feature {gap:clamp(48px,7.2vw,126px);}
+      .feature--reversed {gap:clamp(48px,7.2vw,126px);}
+    }
+    .hero::before {background:linear-gradient(95deg,rgba(32,28,25,.81) 0%,rgba(43,38,32,.64) 47%,rgba(68,60,49,.19) 100%);}
+    .hero-kicker {font-size:13px;letter-spacing:.025em;color:#e1d6c9;}
+    .hero-lead {color:#ece2d6;}
+    .hero .cta {min-height:57px;padding:15px 23px;font-size:14px;}
+    .hero-photo-label {font-size:11px;line-height:1.6;max-width:285px;opacity:.88;}
+    .hero-photo-label span {letter-spacing:.12em;}
+    .about .heading {margin-bottom:27px;}
+    .about-copy .body-copy {font-size:16px;line-height:1.85;}
+    .stats {margin-top:43px;}
+    .stat {padding-top:23px;}
+    .stat strong {font-size:clamp(41px,4.45vw,65px);}
+    .feature-media {display:block;min-height:450px;position:relative;background:#cfc1ae;}
+    .feature--reversed .feature-media {background:#d5d0c7;min-height:390px;}
+    .feature--last .feature-media {background:#c9c9ba;min-height:400px;}
+    .feature-media .placeholder {position:absolute;left:clamp(27px,3vw,46px);bottom:clamp(25px,3vw,45px);top:auto;z-index:2;max-width:calc(100% - 70px);margin:0;padding:0;text-align:left;letter-spacing:0;line-height:1.3;color:#5e5143;}
+    .feature-media .placeholder strong {display:block;font:400 clamp(32px,3.3vw,50px)/1.12 var(--serif);letter-spacing:-.045em;color:#574b40;margin-bottom:8px;}
+    .feature-media .placeholder small {display:block;font-size:12px;line-height:1.6;color:#716353;}
+    .feature-media .media-index {top:26px;right:clamp(27px,3vw,46px);left:auto;bottom:auto;color:#62574a;font-size:10px;letter-spacing:.14em;}
+    .feature-media::before {content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 40%);}
+    .feature--last .feature-media .placeholder {color:#4c5246;}
+    .feature--last .feature-media .placeholder strong {color:#4e5448;}
+    .feature--last .feature-media .placeholder small,.feature--last .feature-media .media-index {color:#63685c;}
+    .feature-copy h3 {font-size:clamp(40px,4vw,58px);line-height:1.12;}
+    .feature-copy p {font-size:16px;line-height:1.8;}
+    .feature-number {font-size:11px;letter-spacing:.05em;font-weight:600;}
+    .gallery-grid {gap:12px;}
+    .gallery-photo {display:block;position:relative;}
+    .gallery-photo:first-child {background:#c9b8a5;}
+    .gallery-photo:nth-child(2) {background:#dad1c5;}
+    .gallery-photo:nth-child(3) {background:#c6c6b8;}
+    .gallery-photo .placeholder {position:absolute;top:25px;left:27px;padding:0;max-width:calc(100% - 54px);text-align:left;color:#65594c;font-size:12px;letter-spacing:.02em;}
+    .gallery-photo figcaption {position:absolute;bottom:26px;left:27px;right:20px;background:none;padding:0;color:#4a3e33;font:400 clamp(22px,2.25vw,35px)/1.15 var(--serif);letter-spacing:-.04em;}
+    .faq {padding-top:clamp(80px,8.5vw,122px);padding-bottom:clamp(80px,8.5vw,122px);}
+    .faq-list summary {font-size:20px;line-height:1.4;}
+    .where-aside strong {line-height:1.06;}
+    @media(max-width:760px) {
+      .hero {background:#49433b;}
+      .hero::before {background:linear-gradient(100deg,rgba(32,28,25,.82),rgba(43,38,32,.52));}
+      .hero-inner {padding-top:clamp(75px,13vw,100px);padding-bottom:58px;}
+      .hero h1 {max-width:640px;line-height:1.07;letter-spacing:-.05em;}
+      .hero .cta {min-height:54px;}
+      .feature-media,.feature--reversed .feature-media {min-height:0;aspect-ratio:1.33;}
+      .feature-media .placeholder {left:24px;bottom:24px;}
+      .feature-media .placeholder strong {font-size:clamp(27px,7vw,38px);}
+      .feature-media .media-index {top:20px;right:24px;}
+      .feature-copy h3 {font-size:clamp(35px,7vw,43px);}
+      .gallery-photo .placeholder {top:15px;left:17px;font-size:11px;}
+      .gallery-photo figcaption {left:17px;right:10px;bottom:18px;font-size:clamp(20px,5vw,28px);}
+      .faq {padding-block:77px;}
+    }
+    @media(max-width:420px) {
+      .hero-inner {padding-top:72px;padding-bottom:45px;}
+      .hero h1 {font-size:clamp(42px,11.4vw,48px);}
+      .feature-media .placeholder strong {font-size:28px;}
+      .gallery-photo figcaption {font-size:22px;}
+    }
+
   </style>
 </head>
 <body>
@@ -373,7 +443,7 @@
 
         <article class="feature" aria-labelledby="celebrate-title">
           <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas svinību zāles fotogrāfijai">
-            <span class="placeholder">Svinību zāles fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 01</span>
+            <span class="placeholder"><strong>Svinību zāle</strong><small>Fotogrāfija pēc saskaņošanas</small></span><span class="media-index">KALNMUIŽA — 01</span>
           </div>
           <div class="feature-copy">
             <span class="feature-number">01 / Svinībām</span>
@@ -385,7 +455,7 @@
 
         <article class="feature feature--reversed" aria-labelledby="stay-title">
           <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas viesu istabu fotogrāfijai">
-            <span class="placeholder">Viesu istabu fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 02</span>
+            <span class="placeholder"><strong>Viesu istabas</strong><small>Fotogrāfija pēc saskaņošanas</small></span><span class="media-index">KALNMUIŽA — 02</span>
           </div>
           <div class="feature-copy">
             <span class="feature-number">02 / Nakšņošanai</span>
@@ -403,7 +473,7 @@
             <a class="detail-link" href="#kontakti">Sazināties par atpūtu <span aria-hidden="true">↗</span></a>
           </div>
           <div class="feature-media" role="img" aria-label="Vieta īstai Kalnmuižas teritorijas vai pirts fotogrāfijai">
-            <span class="placeholder">Teritorijas vai pirts fotogrāfija pēc saskaņošanas</span><span class="media-index">KALNMUIŽA / 03</span>
+            <span class="placeholder"><strong>Atpūta dabā</strong><small>Fotogrāfija pēc saskaņošanas</small></span><span class="media-index">KALNMUIŽA — 03</span>
           </div>
         </article>
       </div>
@@ -418,9 +488,9 @@
         <p>Ēka, telpas un apkārtne — galeriju papildināsim ar vietas aktuālajām fotogrāfijām.</p>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts aktuāls ēkas vai zāles foto</span><figcaption>Ēka un svinību zāle</figcaption></figure>
-        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts istabu foto</span><figcaption>Nakšņošana</figcaption></figure>
-        <figure class="gallery-photo"><span class="placeholder">Saimnieku apstiprināts apkārtnes foto</span><figcaption>Apkārtne</figcaption></figure>
+        <figure class="gallery-photo"><span class="placeholder">Foto pēc saskaņošanas</span><figcaption>Ēka un svinību zāle</figcaption></figure>
+        <figure class="gallery-photo"><span class="placeholder">Foto pēc saskaņošanas</span><figcaption>Nakšņošana</figcaption></figure>
+        <figure class="gallery-photo"><span class="placeholder">Foto pēc saskaņošanas</span><figcaption>Apkārtne</figcaption></figure>
       </div>
       <p class="gallery-fine">Fotogrāfiju vietturi. Oriģinālos attēlus pievienosim pēc saskaņošanas.</p>
     </section>
