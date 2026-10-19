@@ -1,3 +1,13 @@
+## 2026-10-20 — KESTREL v1.1 kvalitātes pārbaude (P0/P1)
+- **STATUSS — STATIC QA PASSED, VISUAL QA OPEN.** Pārbaudītas abas lapas darba zarā `feature/svinibas-page-v1`: `index.html` un `svinibas.html`. `main` nav mainīts.
+- **[LABOTS]** Samazināta pārāk uzkrītošā neoficiālā demo josla (saglabāts paziņojums), noņemta atkārtota informācija sākumlapas “Par Kalnmuižu” un “Svinības” info joslā.
+- **[LABOTS]** Kopīgais footer pārvietots aiz `main` satura (pareizāki dokumenta orientieri / landmarks). Saglabāti pieejamības un saziņas CTA.
+- **[STATIC TESTED]** Abās lapās viens H1, unikāli ID, derīgi iekšējie fragmentu linki, saites starp abām lapām, noindex demo režīms, vienots `styles.css`, mobilie media-query, focus-visible un reduced motion.
+- **[STATIC TESTED]** Galveno krāsu kontrasta aprēķini virsrakstiem/tekstam atbilst ≥4,5:1; pieslēgtās Kalnmuižas Google Maps koordinātas ir iegūtas no viesunamiem.lv “Maršruts” saites. Ārējā Google iframe faktiskā ielāde nav pārbaudīta.
+- **[NEPIECIEŠAMS VIZUĀLAIS QA]** Katru lapu pārbaudīt 1440, 1024, 768, 390 un 360 px; galvenie kontrolpunkti: Hero, mobilais header, kopējais ritms, pārmaiņus pakalpojumu bloki, kontaktu CTA, kartes iframe. Faktiskie atvērtās lapas desktop/mobile screenshot vēl **nav** šim atjauninātajam zarām pārbaudīti. Nepiešķirt `QA PASSED` vai `VISUAL LOCKED` statusu bez apskates.
+- **[PUBLISKĀ PREVIEW GATE]** Sagatavot publisko demo saiti tikai pēc vizuāla apstiprinājuma. `noindex,nofollow`, redzams demo apzīmējums; pirms klienta demonstrācijas arī jāizvērtē neapstiprinātie foto, piedāvājums un piebraukšanas ceļš. Live produkcijas publicēšana nav atļauta šajā posmā.
+- **[NEXT]** Saņemt 2 lapu aktuālos desktop/mobile renderējumus, salabot tikai redzēto, LOCK, tad publicēt preview atsevišķā adresē, neveicot merge uz `main` bez apstiprinājuma.
+
 # PROJECT STATE — Kalnmuiža demo
 
 **Atjaunināts:** 2026-10-19  
