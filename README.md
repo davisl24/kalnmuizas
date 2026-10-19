@@ -22,7 +22,7 @@ Esošā projekta mapē: `git pull origin main`. Atver `index.html` VS Code Live 
 
 ## Dizaina lēmumi
 - Heritage Editorial, KARLE pilna platuma Hero kompozīcijas princips, oriģināla Kalnmuižas krāsu palete.
-- Georgia virsraksti, sans-serif pamatteksts; desktop H1 72 / H2 48 / H3 30 / body 16 px; mobile H1 40 / H2 32 / H3 24 / body 16 px.
+- Manrope virsraksti un pamatteksts; desktop H1 72 / H2 48 / H3 30 / body 16 px; mobile H1 40 / H2 32 / H3 24 / body 16 px.
 - 4/8 px spacing, 1280 px container, 40/20 px malas, 96/64 px sekciju padding.
 - Viena primārā darbība: **Jautāt par pieejamību**.
 - Vienas lapas sadaļas: Hero, Par vietu, Svinības/Nakšņošana/Atpūta, Atrašanās vieta, Kontakti. Nav tukšas galerijas, atkārtota FAQ vai izdomātu atsauksmju.
@@ -35,3 +35,8 @@ Esošā projekta mapē: `git pull origin main`. Atver `index.html` VS Code Live 
 - Pirms LIVE nepieciešami faktiskie vizuālie, funkciju un avotu pārbaudes rezultāti.
 
 Aktuālie lēmumi un neatrisinātie jautājumi: [PROJECT_STATE.md](PROJECT_STATE.md).
+
+## Pašreizējā vizuālā pārbaude
+- Pēc 7 anotācijām pārveidots virsrakstu fonts un logo, papildināts "Par Kalnmuižu", pievienoti nakšņošanas un pirts CTA, nošķirts footer.
+- Google Maps izmanto viesunamiem.lv norādītās maršruta koordinātas; faktiskā kartes darbība un piebraukšana vēl jāpārbauda.
+- GitHub statiskā QA izieta; faktiskais desktop/mobile renderējums nav apstiprināts.
