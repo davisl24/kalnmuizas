@@ -71,12 +71,12 @@
   .mobile-links a {display:flex;align-items:center;min-height:44px;padding:var(--s2) var(--s3);font-size:var(--secondary);}
   .mobile-links a:hover {background:var(--cream);}
 
-  /* Hero: approved KARLE full-width composition, photo placeholder remains honest. */
-  .hero {position:relative;display:flex;align-items:center;min-height:clamp(560px,74svh,760px);overflow:hidden;background:#49433b;color:#fffaf1;}
-  .hero-inner {padding-block:var(--s30);}
-  .hero-copy {max-width:760px;}
-  .hero-kicker {margin-bottom:var(--s6);font-size:var(--secondary);letter-spacing:.01em;color:#e6dbcf;}
-  .hero h1 {max-width:760px;margin-bottom:var(--s8);font:400 var(--h1)/1.1 var(--serif);letter-spacing:-.045em;text-wrap:balance;}
+  /* Hero: KARLE-inspired strong full-bleed composition, but warm Kalnmuiža heritage character. */
+  .hero {position:relative;display:flex;align-items:flex-end;min-height:clamp(590px,78svh,790px);overflow:hidden;background:#49433b;color:#fffaf1;}
+  .hero-inner {padding-block:var(--s24) var(--s30);}
+  .hero-copy {max-width:720px;}
+  .hero-kicker {margin-bottom:var(--s6);font-size:var(--secondary);line-height:1.5;letter-spacing:.02em;color:#e6dbcf;}
+  .hero h1 {max-width:720px;margin-bottom:var(--s8);font:400 var(--h1)/1.08 var(--serif);letter-spacing:-.045em;text-wrap:balance;}
   .hero h1 em {font-style:italic;font-weight:400;}
   .cta {display:inline-flex;align-items:center;justify-content:space-between;gap:var(--s8);min-height:52px;padding:var(--s3) var(--s6);background:var(--cream);color:var(--ink);font-size:var(--secondary);font-weight:600;transition:background .18s;}
   .cta:hover {background:#e4d6c6;}
@@ -88,30 +88,30 @@
   .eyebrow {font-size:var(--label);line-height:1.4;letter-spacing:.05em;font-weight:600;color:#765d47;}
   .body-copy {max-width:65ch;font-size:var(--body);line-height:1.65;color:var(--muted);}
 
-  /* About: one editorial information statement, without redundant metrics. */
-  .about {display:grid;grid-template-columns:minmax(160px,.30fr) minmax(0,1fr);gap:var(--s16);align-items:start;}
+  /* About: short editorial introduction with independent left label and story. */
+  .about {display:grid;grid-template-columns:minmax(160px,.32fr) minmax(0,1fr);gap:var(--s16);align-items:start;}
   .about-label {padding-top:var(--s2);}
-  .about-copy {max-width:790px;}
+  .about-copy {max-width:720px;}
   .about .heading {margin-bottom:var(--s6);}
   .small-rule {display:none;}
 
-  /* Services: alternating editorial layouts, not cards. */
+  /* Services: KARLE-inspired editorial row cadence; no decorative cards. */
   .places {background:var(--paper);}
-  .places-head {margin-bottom:var(--s16);}
-  .places-head .heading {margin-top:var(--s3);max-width:800px;}
-  .feature {display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:var(--s16);align-items:center;margin-bottom:var(--s24);}
-  .feature--reversed {grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);}
+  .places-head {margin-bottom:var(--s12);}
+  .places-head .heading {max-width:800px;}
+  .feature {display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:var(--s16);align-items:center;padding-block:var(--s12);border-top:1px solid var(--line);}
+  .feature--reversed {grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);border-bottom:1px solid var(--line);}
   .feature--reversed .feature-media {grid-column:2;grid-row:1;}
   .feature--reversed .feature-copy {grid-column:1;grid-row:1;}
-  .feature-media {position:relative;min-width:0;aspect-ratio:1.28;background:#cfc1ae;}
-  .feature--reversed .feature-media {aspect-ratio:1.42;background:#d4cfc5;}
+  .feature-media {position:relative;min-width:0;aspect-ratio:1.54;background:#cfc1ae;}
+  .feature--reversed .feature-media {aspect-ratio:1.50;background:#d4cfc5;}
   .feature-media .placeholder {position:absolute;left:var(--s8);bottom:var(--s8);max-width:calc(100% - 64px);text-align:left;color:#584c40;}
   .feature-media .placeholder strong {display:block;margin-bottom:var(--s2);font:400 var(--h3)/1.2 var(--serif);letter-spacing:-.03em;}
   .feature-media .placeholder small {display:block;font-size:var(--label);line-height:1.5;color:#665c51;}
   .feature-copy {max-width:490px;}
   .feature-copy h3 {margin-bottom:var(--s4);font:400 var(--h3)/1.2 var(--serif);letter-spacing:-.025em;}
   .feature-copy p {max-width:56ch;font-size:var(--body);line-height:1.65;color:var(--muted);}
-  .feature--last {display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);background:#ebe4d9;align-items:stretch;}
+  .feature--last {display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);margin-top:var(--s12);background:#ebe4d9;align-items:stretch;}
   .feature--last .feature-copy {align-self:center;padding:var(--s16);max-width:none;}
   .feature--last .feature-media {min-height:350px;aspect-ratio:auto;background:#c8c8b8;}
   .feature--last .feature-media .placeholder strong {color:#4d5146;}
@@ -182,17 +182,18 @@
     .brand-sign {font-size:30px;padding-right:var(--s2);}
     .brand-text strong {font-size:23px;}
     .brand-text small {font-size:9px;letter-spacing:.02em;}
-    .hero {display:block;min-height:0;}
+    .hero {display:flex;flex-direction:column;align-items:stretch;justify-content:center;min-height:clamp(510px,73svh,680px);}
     .hero-inner {padding-block:var(--s24) var(--s12);}
     .hero h1 {max-width:560px;margin-bottom:var(--s6);}
     .hero-kicker {margin-bottom:var(--s4);}
     .hero-photo-label {position:static;max-width:none;padding:0 var(--page-pad) var(--s6);text-align:left;font-size:11px;}
     .hero-photo-label span {display:inline;margin-right:var(--s2);}
     .about {gap:var(--s6);}
-    .places-head {margin-bottom:var(--s12);}
-    .feature,.feature--reversed {gap:var(--s6);margin-bottom:var(--s16);}
+    .places-head {margin-bottom:var(--s8);}
+    .feature,.feature--reversed {gap:var(--s6);padding-block:var(--s8);margin-bottom:0;}
     .feature-media,.feature--reversed .feature-media {aspect-ratio:1.25;}
     .feature-media .placeholder {left:var(--s6);bottom:var(--s6);max-width:calc(100% - 48px);}
+    .feature--last {margin-top:var(--s8);}
     .feature--last .feature-copy {padding:var(--s6);}
     .feature--last .feature-media {aspect-ratio:1.25;}
     .where .heading {margin-block:var(--s3) var(--s6);}
