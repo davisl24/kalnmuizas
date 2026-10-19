@@ -7,6 +7,13 @@
 **Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
+## 2026-10-19 — Atsevišķa “Svinības” lapa (jaunākais lēmums)
+- **[APSTIPRINĀTS VIRZIENS]** No vienas lapas demo pakāpeniski pārejam uz vairāku lapu mājaslapu: Sākums, Svinības, Nakšņošana, Kontakti/atrašanās vieta. Jaunas lapas būvējam tikai ar atbilstošu saturu.
+- **[BUILT — WORK BRANCH]** `feature/svinibas-page-v1`: izveidots `svinibas.html`, izdalīts kopīgais `styles.css`, sākumlapas svinību sadaļā pievienota saite un navigācija. Nav mainīta `main` versija.
+- **[PĀRBAUDĪTS AVOTS, NAV KLIENTA APSTIPRINĀJUMA]** Dienvidkurzemes tūrisma katalogā minēta svinību zāle līdz 60 viesiem un nakšņošanas iespējas. Neizvietot cenas kā aktuālu piedāvājumu; guļvietu skaits avotos atšķiras.
+- **[NOT TESTED]** Darba zara desktop/mobile pārlūka renderējums un CTA klikšķu faktiskā uzvedība vēl jāpārbauda un jāapstiprina lietotājam. Tikai pēc tam var apsvērt merge uz `main`.
+- **[NEXT]** Atvērt `svinibas.html` lokāli, vizuāli izskatīt 1440/390 px, novērst konkrētas problēmas. Pēc apstiprinājuma izlemt Nakšņošanas lapas informācijas apjomu.
+
 ## 2026-10-19 — Dizaina sistēma no KESTREL Visual Direction v1.1
 - **[APSTIPRINĀTS]** Virsrakstu fonts: Georgia (regular); body: Segoe UI / Arial sans-serif.
 - **[APSTIPRINĀTS]** Desktop: H1 72 px / H2 48 px / H3 30 px / body 16 px / secondary 14 px / labels 12 px.
