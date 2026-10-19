@@ -7,6 +7,14 @@
 **Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
+## 2026-10-19 — KARLE dizaina principu pielāgošana “Svinības” lapai
+- **[LIETOTĀJA VIRZIENS]** Patīk paša KARLE demo vizuālie principi. Precīzais avots: `davisl24/karle`, `index.html` (nevis publiskā karle.lv vietne).
+- **[PROPOSED / BUILT darba zarā]** Pārņemts: full-width Hero ar lielu Georgia virsrakstu un vienu CTA, smalka trīs informācijas vienību josla un pārmaiņus izvietoti lieli attēlu/teksta bloki.
+- **[ATŠĶIRĪGA IDENTITĀTE]** Kalnmuižai saglabāti siltie vēsturiskie zemes toņi, savs saturs un pakalpojumu proporcijas. Netiek izmantoti KARLE foto, tekstu materiāli, krāsu palete vai identiski HTML dizaina risinājumi.
+- **[LOCKED SAGLABĀTS]** Project Visual Direction v1.1: desktop H1 72 / H2 48 / H3 30, mobile 40 / 32 / 24, 1280 px container, desktop/mobile 40/20 px malas un 96/64 px sekciju ritms.
+- **[TESTED STATIC ONLY]** Viens H1, iekšējās saites un CSS pārklājums pārbaudīts; faktiskais desktop/mobile renderējums vēl **NOT TESTED**. Fotogrāfiju vietturi joprojām marķēti kā gaidoši īstas tiesības.
+- **[NEXT]** Atvērt jauno `svinibas.html` darba zarā, izskatīt desktop/mobile ekrānuzņēmumus, labot redzamās problēmas, pēc lietotāja apstiprinājuma merge.
+
 ## 2026-10-19 — Atsevišķa “Svinības” lapa (jaunākais lēmums)
 - **[APSTIPRINĀTS VIRZIENS]** No vienas lapas demo pakāpeniski pārejam uz vairāku lapu mājaslapu: Sākums, Svinības, Nakšņošana, Kontakti/atrašanās vieta. Jaunas lapas būvējam tikai ar atbilstošu saturu.
 - **[BUILT — WORK BRANCH]** `feature/svinibas-page-v1`: izveidots `svinibas.html`, izdalīts kopīgais `styles.css`, sākumlapas svinību sadaļā pievienota saite un navigācija. Nav mainīta `main` versija.
