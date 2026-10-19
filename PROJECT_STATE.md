@@ -7,6 +7,17 @@
 **Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
+## 2026-10-19 — Browser review, 7 anotāciju labojumu kārta
+- **[LIETOTĀJA PIEPRASĪTS, IEVIETS DARBA ZARĀ]** Heading Georgia/italic aizstāts ar Manrope 500/600; vārda logo vienkāršots, noņemta dekoratīvā K monogramma un mazais apakšvirsraksts.
+- **[LIETOTĀJA PIEPRASĪTS]** "Par Kalnmuižu" pilnvērtīga kompakta sadaļa; vēsturiska ap 200 gadus sena atjaunota ēka bioloģiskās saimniecības teritorijā (Dienvidkurzemes tūrisma avots).
+- **[LIETOTĀJA PIEPRASĪTS]** Nakšņošanai un pirtij pievienoti konkrēti CTA uz kontaktiem; svinību CTA saglabāts uz `svinibas.html`.
+- **[PAZIŅOTS AVOTS]** Viesunamiem.lv/Kalnmuiža Google Maps maršruta saite norāda uz 56.6821363853466, 21.352693304387003; iframe un directions saite piesaistīta šīm koordinātām, nevis neviennozīmīgam vārdam “Kalnmuiža”. **Vietas/iebrauktuves precizitāte vēl jāapstiprina ar saimniekiem.**
+- **[PAZIŅOTS AVOTS]** Pievienots publiskajā Dienvidkurzemes tūrisma un viesunamiem.lv katalogos minētais e-pasts kalnamuizadunalka@inbox.lv. **Pirms LIVE pārbaudīt tā aktualitāti.**
+- **[LIETOTĀJA PIEPRASĪTS]** Kontaktu sadaļa un footer atdalīti ar atšķirīgiem foniem, darbības prioritāte: tālrunis → e-pasts/Facebook; footer minimāls.
+- **[IEPRIEKŠ LOCKED, SAGLABĀTS]** Konkrētās desktop/mobile H1/H2/H3 vērtības, 4/8 spacing, 1280px container, Heritage Editorial/KARLE kompozīcijas princips, 5 sākumlapas sadaļas.
+- **[STATIC QA PASSED]** Saites uz sekcijām, unikāli ID, 1×H1 katrā lapā, CSS balanss, kopīgie stili, noindex un main neizmainīts.
+- **[VISUAL QA OPEN]** Jaunais localhost desktop un mobile renderējums, Google iframe faktiskā darbība un vizuālais iespaids jāpārbauda pārlūkā pirms merge.
+
 ## 2026-10-19 — KARLE virziens visai Kalnmuižas vietnei
 - **[LIETOTĀJA PRECIZĒJUMS]** KARLE projekta vizuālie principi attiecas uz **visu Kalnmuižas vietni**, nevis tikai `svinibas.html`.
 - **[BUILT, DARBA ZARĀ]** `index.html` un `svinibas.html` izmanto kopīgu `styles.css`, vienotu header/navigācijas/CTA sistēmu, full-width editorial Hero, pārdomātu tipogrāfiju un ritmu, lielas attēlu zonas un atbilstoši mainīgus satura izkārtojumus. Esošās atrašanās vietas/Google Maps un kontaktu sadaļas saglabātas.
