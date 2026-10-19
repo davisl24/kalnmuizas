@@ -7,11 +7,20 @@
 **Statuss:** DEMO IR `main`, GATAVS LOKĀLAI PĀRBAUDEI / VIZUĀLAIS BROWSER QA VĒL NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
+## 2026-10-19 — Dizaina sistēma no KESTREL Visual Direction v1.1
+- **[APSTIPRINĀTS]** Virsrakstu fonts: Georgia (regular); body: Segoe UI / Arial sans-serif.
+- **[APSTIPRINĀTS]** Desktop: H1 72 px / H2 48 px / H3 30 px / body 16 px / secondary 14 px / labels 12 px.
+- **[APSTIPRINĀTS]** Mobile ≤760 px: H1 40 px / H2 32 px / H3 24 px / body 16 px.
+- **[APSTIPRINĀTS]** Atstarpju ritms: 4/8 px; container 1280 px; lapas malas 40 px desktop, 20 px mobile; sekcijas 96 px desktop / 64 px mobile.
+- **[APSTIPRINĀTS]** Saglabāt apstiprināto krāsu paleti, vienas lapas informācijas arhitektūru, full-width Hero un CTA “Jautāt par pieejamību”.
+- **[BUILT / NOT VISUALLY TESTED]** CSS konsolidēts vienā sistēmā; noņemti pārrakstošie stili, dekoratīvie numuri un tukši apmales rotājumi. Saglabātas 5 sekcijas: Hero, Par vietu, Iespējas, Atrašanās vieta, Kontakti.
+- **[NOT TESTED]** Faktiskais jaunās versijas desktop/mobile renderējums: pārbaude uz localhost vēl jāveic. QA ieteicamie platumi: 360, 390, 768, 1024, 1440 px. Darba rezultātu apstiprina lietotājs pēc vizuālās pārbaudes.
+
 ## GitHub stāvoklis un nākamais kontrolpunkts
 - 2026-10-19 ar lietotāja apstiprinājumu apvienots Draft PR #1 ar `main` (squash merge `36e9d3d1da72a36e51073def1b5f674106eda484`).
 - `main` satur `index.html`, `README.md` un `PROJECT_STATE.md`; demo paredzēts lokālai apskatei, nevis oficiālai produkcijas publicēšanai.
 - GitHub koda/enkuru struktūras statiskās pārbaudes ir izpildītas, taču faktiskā `localhost` atvēršana, mobilais/desktop attēlojums un mijiedarbība **nav pārbaudīti**.
-- **Tuvākais uzdevums:** atvērt `main` lokāli, vizuāli iziet visu lapu un novērst tikai konstatētās problēmas.
+- **Tuvākais uzdevums:** `git pull origin main`, atvērt localhost un pārbaudīt virsrakstu hierarhiju, spacing un mobilās sekciju pārejas; labot tikai vizuāli konstatēto.
 
 ## Projektam piemērotais apjoms
 Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt potenciālajam pasākuma apmeklētājam saprast vietu un **precizēt pašreizējo pieejamību**. Neveidot vairākas lapas vai neīstu rezervāciju sistēmu bez pamatojuma.
@@ -23,7 +32,7 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - [x] Mobilās izvēlnes aizvēršana ar Escape, klikšķi ārpus izvēlnes un izvēloties saiti.
 - [x] Trīs reālistiski pieejamības precizēšanas soļi (nesolot atbildes laiku).
 - [x] Saīsināti, skaidrāki pakalpojumu apraksti.
-- [x] FAQ par brīvajiem datumiem, 60 viesu zāli, nakšņošanu, cenu nenoteiktību un atrašanās vietu.
+- [x] Atkārtotais FAQ izņemts pēc D2/D4 satura redukcijas, lai neatkārtotu pakalpojumu un atrašanās vietas faktus.
 - [x] Vienota galvenā CTA formulēšana (Jautāt par pieejamību) un tiešās zvanīšanas iespējas.
 - [x] Footer ar navigāciju, telefonu, atrašanās vietu, Facebook un skaidru DEMO statusu.
 - [x] Statisks `noindex,nofollow` demo, bez analītikas, marketinga skriptiem un kontaktu formas.
@@ -36,7 +45,7 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - **Tālrunis:** +371 29824636 atkārtojas vairākos avotos; jāapstiprina pie saimniekiem.
 - **E-pasts:** avotos ir divi atšķirīgi varianti: `kalnmuizadunalka@inbox.lv` un `kalnamuizadunalka@inbox.lv`. Abi jāpārbauda; neviens netiek izvietots lapā.
 - **Cenas:** publicētas katalogos, bet šodienas aktualitāte nav zināma; netiek pasniegtas kā spēkā esošas.
-- **Fotogrāfijas:** reālu, aktuālu attēlu tiesības nav verificētas. Hero un galerijā saglabāti atklāti marķēti vietturi.
+- **Fotogrāfijas:** reālu, aktuālu attēlu tiesības nav verificētas. Hero un pakalpojumu blokos saglabāti marķēti vietturi; atsevišķā galerija pagaidām izņemta.
 
 ## Gatavības vārti
 ### Pirms demo gala vizuālā apstiprinājuma
