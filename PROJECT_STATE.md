@@ -3,7 +3,7 @@
 **Atjaunināts:** 2026-10-19  
 **Repo:** `davisl24/kalnmuizas`  
 **Darba zars:** `demo/heritage-editorial-v1`  
-**Statuss:** IMPLEMENTĒTS (saturs/UX) / BROWSER QA NAV VEIKTS / KLIENTA FAKTI JĀAPSTIPRINA  
+**Statuss:** DEMO KODS PABEIGTS / BROWSER QA NAV VEIKTS / PAKALPOJUMU DATI, FOTOGRĀFIJAS UN CENAS JĀAPSTIPRINA  
 **Apstiprināts:** Heritage Editorial + KARLE tipa pilna platuma Hero, asimetriskas satura sadaļas.
 
 ## Projektam piemērotais apjoms
@@ -16,14 +16,14 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - [x] Mobilās izvēlnes aizvēršana ar Escape, klikšķi ārpus izvēlnes un izvēloties saiti.
 - [x] Trīs reālistiski pieejamības precizēšanas soļi (nesolot atbildes laiku).
 - [x] Saīsināti, skaidrāki pakalpojumu apraksti.
-- [x] FAQ par darbības statusu, 60 viesu zāli, nakšņošanu, cenu nenoteiktību un atrašanās vietu.
+- [x] FAQ par brīvajiem datumiem, 60 viesu zāli, nakšņošanu, cenu nenoteiktību un atrašanās vietu.
 - [x] Vienota galvenā CTA formulēšana (Jautāt par pieejamību) un tiešās zvanīšanas iespējas.
 - [x] Footer ar navigāciju, telefonu, atrašanās vietu, Facebook un skaidru DEMO statusu.
 - [x] Statisks `noindex,nofollow` demo, bez analītikas, marketinga skriptiem un kontaktu formas.
 - [x] Bez stock/AI attēliem un bez izdomātām atsauksmēm, skaitļiem, cenām vai pieejamības datumiem.
 
 ## 2026-10-19 publisko avotu pārbaude
-- **Darbības statuss pēc 2023. gada ugunsgrēka:** nav neatkarīgi apstiprināts. Uzskatāms par būtisku bloķējošu faktu pirms oficiālas publicēšanas.
+- **Darbības statuss:** lietotājs 2026-10-19 apstiprināja, ka viesu nams šobrīd darbojas. Šis apstiprinājums pats par sevi nenozīmē, ka visas vēsturiskajos katalogos minētās telpas un pakalpojumi ir pieejami.
 - **Zāle:** katalogi min līdz 60 viesiem, bet pašreizējā ietilpība nav apstiprināta.
 - **Nakšņošana:** katalogi min 7 istabas; guļvietu skaits atšķiras: 35 un 39.
 - **Tālrunis:** +371 29824636 atkārtojas vairākos avotos; jāapstiprina pie saimniekiem.
@@ -39,14 +39,15 @@ Vienas lapas neoficiāls viesu nama demo. Galvenais mērķis — palīdzēt pote
 - [ ] Lietotāja vizuālais apstiprinājums.
 
 ### Pirms reālas publicēšanas
-- [ ] Pārliecināties, ka viesu nams darbojas un ir gatavs jaunām rezervācijām.
+- [x] Lietotājs apstiprināja, ka viesu nams darbojas.
+- [ ] Precizēt jaunu pasākumu rezervāciju pieejamību un faktisko telpu/pakalpojumu apjomu.
 - [ ] Apstiprināt aktuālo zāles/istabu ietilpību, pakalpojumus, kontaktus un cenu nosacījumus.
 - [ ] Iegūt īpašnieka atļauju izmantot konkrētās aktuālās fotogrāfijas.
 - [ ] Ievietot optimizētus WebP/AVIF attēlus, korektus `alt` un lazy loading ārpus Hero.
 - [ ] Iegūt īstas atsauksmes, ja tādas drīkst izmantot; pretējā gadījumā atsauksmju sadaļu nelikt.
 - [ ] Pēc izvēlētā hostinga, reālās datu apstrādes un iesaistītā uzņēmuma datiem sagatavot atbilstošu privātuma informāciju. Sīkdatņu baneris vajadzīgs tikai atbilstoši reālajiem skriptiem/sīkdatnēm, nevis automātiski.
 - [ ] Tikai ar atļauju izņemt DEMO marķējumu un `noindex`, pielikt precīzus SEO meta/strukturētos datus un publicēt.
-- [ ] `main` nav jāmaina bez lietotāja apstiprinājuma.
+- [x] Lietotājs 2026-10-19 apstiprināja visa demo satura pārnešanu uz `main` lokālai apskatei. Tā nav atļauja publicēt oficiālu mājaslapu.
 
 ## Galvenie avoti
 - https://www.dienvidkurzeme.travel/visainfo/item/aizputes-apkartne/naktsmitnes-aizpute/viesu-nams-kalnmuiza-3/
