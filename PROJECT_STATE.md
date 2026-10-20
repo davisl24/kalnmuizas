@@ -1,3 +1,11 @@
+## 2026-10-20 — Atsevišķo virsrakstu vienkāršošana, kontaktu pozīcija un galerijas preview
+- **[LIETOTĀJA ANOTĀCIJA 1 — BUILD DONE]** No `naksnosana.html` un `galerija.html` izņemts ievada teksts tieši zem H1. `kontakti.html` tas jau nebija, atstarpju struktūra sakārtota. Pārējās lapās šādu H1 apakštekstu nav; pamatsekciju noderīgie apraksti saglabāti.
+- **[LIETOTĀJA ANOTĀCIJA 2 — BUILD DONE]** Kontaktu lapā kreisais kontaktdatu bloks desktop divu kolonnu izkārtojumā vertikāli centrēts pret karti (`align-items:center`). Kad ekrāna platums ≤860px, izkārtojums pāriet vienā kolonnā ar `align-items:start`.
+- **[AGRĀK APSTIPRINĀTS — BUILD DONE]** Sākumlapas `home-story-inner` gap 112px desktop un p teksta max-width 38ch. Galerijas priekšskatījums pārveidots no attēla/teksta divām kolonnām uz vienu plašu attēla vietturi ar H2 un primāru “Apskatīt visu galeriju” CTA pašā laukumā. Bez neautorizētas fotogrāfijas.
+- **[STATIC QA PASS]** Sešām HTML lapām unikāli ID, katrā viens H1, nav bojātu iekšējo fragmentu / savstarpējo HTML saišu; saglabāts `noindex`, nav bojātas CSS iekavas, pārbaudīti minēto labojumu media-query noteikumi un GitHub `main` nav mainīts.
+- **[VISUAL QA OPEN]** Faktiskais desktop/mobile renderējums šajā izpildē netika pieejams; nedrīkst uzskatīt vizuālo QA par izietu bez pārlūka apskates.
+- **[DEMO]** Pārdeploy uz atsevišķo projektu `kalnmuizas-demo` no `feature/svinibas-page-v1`, deploy ID `dpl_JCy2pnbiuHoS3PMZgcbhjKTGNKpM`, Git SHA `7b21a3c5bad09d28bdb5b430fd0c5be507f3854c`. Sākotnēji deployment vēl rindā; pārbaudīt READY pirms publiskas gatavības apgalvojuma.
+
 ## 2026-10-20 — 8 pārlūka anotāciju labojumi (Kalnmuiža)
 - **[BUILD DONE]** KARLE attēli izmantoti tikai kā vizuālā principa atsauce, KARLE kods nav mainīts.
 - **[BUILD DONE]** Dekoratīvie eyebrow/label uzraksti nav lietoti Kalnmuižas sešu lapu HTML; Nakšņošanas H2 ir centrēts un faktiem pievienotas jēgpilnas line icons.
