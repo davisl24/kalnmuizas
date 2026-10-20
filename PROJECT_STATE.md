@@ -1,3 +1,16 @@
+## 2026-10-20 — 8 pārlūka anotāciju labojumi (Kalnmuiža)
+- **[BUILD DONE]** KARLE attēli izmantoti tikai kā vizuālā principa atsauce, KARLE kods nav mainīts.
+- **[BUILD DONE]** Dekoratīvie eyebrow/label uzraksti nav lietoti Kalnmuižas sešu lapu HTML; Nakšņošanas H2 ir centrēts un faktiem pievienotas jēgpilnas line icons.
+- **[BUILD DONE]** Sākumlapas trīs piedāvājumi pārkārtoti trīs pārdomātos izvēles blokos ar konkrētiem CTA, saglabājot atturīgu Heritage Editorial virzienu. Saglabāts gallery preview ar marķētu attēla vietu.
+- **[BUILD DONE]** Noslēguma CTA visās attiecīgajās lapās: centrēts H2 un poga zem virsraksta, arī mobile.
+- **[BUILD DONE]** Kontaktu lapā izņemts nevajadzīgs Hero apraksts; tālrunim, e-pastam, Facebook un adresei — funkcionālas line icons, bez dekoratīvām pasvītrojuma līnijām, ar vienu maršruta CTA.
+- **[BUILD DONE]** Jauna iekšlapa `par-kalnmuizu.html`, visās lapās navigācija un footer ved uz to, nevis `index.html#par-vietu`. Sākumlapā paliek īss ievads par vietu.
+- **[LOCKED PRESERVED]** Manrope, silti zemes toņi, desktop/mobile 72/48/30 un 40/32/24 px H1/H2/H3, 1280 px container, 40/20px malas un 4/8px spacing pamats.
+- **[STATIC QA PASS]** Visās 6 HTML lapās pa vienam H1, unikāli ID, 0 bojātu lokālo fragmentu un savstarpējo HTML saišu, noindex + neoficiāls demo, CSS pareizi balansētas iekavas un CSS mobile noteikumi.
+- **[DEPLOYED / VERCEL READY]** `https://kalnmuizas-demo.vercel.app/` no darba zara `feature/svinibas-page-v1`, deploy `dpl_AXUE9h4Nv1gRFZ2kJgGXf993SKBs`, Git SHA `c23a602cf0b2ab7abdc5bf6faa384d0cc8e68e21`; `main` nav mainīts. Vercel atsevišķā demo projekta tehniskais target ir `production`, tas nav Kalnmuižas oficiālais resurss.
+- **[VISUAL QA OPEN]** Nav pieejams faktiskā renderējuma apliecinājums desktop/mobile; publisko URL nevarēja nolasīt ārējais pārlūka/web serviss. Nav verificēta Google Maps iframe ielāde. READY != faktiskais vizuālais QA PASS.
+- **[REMAINS]** Fotogrāfiju izmantošanas atļauja un aktualitāte, īpašnieka apstiprinātas detaļas un pēdējā lietotāja vizuālā pārbaude pirms klienta uzrunāšanas.
+
 ## 2026-10-20 — KARLE struktūras pielāgojums visam Kalnmuižas demo
 - **[USER APPROVED / BUILT]** Lietotājs vēlas KARLE principu: īsa sākumlapa un atsevišķas pakalpojumu/informācijas lapas. Kalnmuiža nav KARLE kopija.
 - **[BUILT]** `index.html`: Hero → īsi trīs iespēju apraksti ar jēgpilnām line icons un CTA → viena īsa vēstures sadaļa → noslēguma CTA. Smagie galerijas un kartes bloki pārcelti uz iekšlapām.
