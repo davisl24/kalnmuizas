@@ -1,3 +1,16 @@
+## 2026-10-20 — KARLE struktūras pielāgojums visam Kalnmuižas demo
+- **[USER APPROVED / BUILT]** Lietotājs vēlas KARLE principu: īsa sākumlapa un atsevišķas pakalpojumu/informācijas lapas. Kalnmuiža nav KARLE kopija.
+- **[BUILT]** `index.html`: Hero → īsi trīs iespēju apraksti ar jēgpilnām line icons un CTA → viena īsa vēstures sadaļa → noslēguma CTA. Smagie galerijas un kartes bloki pārcelti uz iekšlapām.
+- **[BUILT]** `svinibas.html`: saglabāta editorial kompozīcija, noņemti dekoratīvie eyebrow uzraksti, CTA un galerijas saite ved uz jaunajām lapām.
+- **[NEW]** `naksnosana.html`: īsa nakšņošanas informācija, centrēts H2, trīs ikonām ilustrēti fakti, liels vietturis un saziņa. Nav izdomāti KARLE istabu tipi vai aprīkojums.
+- **[NEW]** `galerija.html`: atturīgs 3 vietturu izkārtojums. Pieejamās īstās Kalnmuižas fotogrāfijas/nav tiesības pārbaudītas — neko svešu nepasniedz kā oriģinālu.
+- **[NEW]** `kontakti.html`: telefons, e-pasts, Facebook, Google Maps ar katalogā atrastām koordinātām (piebraukšana jāsaskaņo).
+- **[APSTIPRINĀTA DIZAINA SISTĒMA SAGLABĀTA]** Manrope, H1/H2/H3 desktop 72/48/30, mobile 40/32/24, 1280 px konteiners, 40/20 px malas, 96/64 px sadaļas, 4/8 px spacing. Noņemti dekoratīvie eyebrow/mazie label teksti, bet atstāti funkcionāli breadcrumbs un demo/foto tiesību norādes.
+- **[STATIC QA PASS]** 5 lapas, katrā 1 H1, unikāli ID, nav bojātu iekšējo fragmentu un savstarpējo lapu saišu, nav `img` ar nepārbaudītu materiālu, CSS balanss un responsive noteikumi pārbaudīti.
+- **[PUBLIC DEMO READY — render QA OPEN]** `https://kalnmuizas-demo.vercel.app/`, Vercel izvietojums `dpl_HcZ71EiwfPKkxevXCQSFcdNqKcxR` uz `feature/svinibas-page-v1`, SHA `7bd29433d54309aedada9a132801ae3cf7133b1c`; Vercel stāvoklis READY. Tas ir atsevišķā neoficiālā demo projektā (Vercel tehniski `target=production`), nevis Kalnmuižas oficiālais domēns. `main` netika mainīts.
+- **[NOT TESTED]** Ārējo HTTP pieprasījumu izpildi un reālo vizuālo renderējumu šajā sesijā nevarēja verificēt DNS/piekļuves ierobežojumu dēļ. Pirms nosūtīšanas klientam nepieciešams apskatīt publisko desktop/mobile demo un karti, kā arī saskaņot izmantotos aktuālos foto un pakalpojumus.
+- **[NEXT]** Vizuāli pārbaudīt abas galvenās lapas un trīs jaunās iekšlapas, savākt aktuālus foto ar atļaujām; tikai tad klientam sūtāms pabeigts dizaina priekšlikums.
+
 ## 2026-10-20 — Galerija, Par Kalnmuižu un Svinību pieteikums
 - **[BUILD DONE, darba zarā]** Sākumlapas "Par Kalnmuižu" saturs precizēts ar publiskajos tūrisma katalogos minētajiem faktiem: aptuveni 200 gadus sena, atjaunota ēka, bioloģiskās saimniecības teritorija, Dunalkas pagasts.
 - **[BUILD DONE, FOTO PENDING]** Sākumlapā pievienota "Kalnmuiža fotogrāfijās" sadaļa ar 3 reāliem foto paredzētām vietām (ēka/teritorija, zāle, istabas), atbilstošu responsive grid un footer navigācijas saiti. Tur NAV nelegāli pārņemtu vai mākslīgi radītu foto. Galerija pilnvērtīgi gatava tikai pēc saskaņotiem, aktuāliem attēliem.
