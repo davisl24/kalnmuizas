@@ -1,3 +1,14 @@
+## 2026-10-20 — Galerija, Par Kalnmuižu un Svinību pieteikums
+- **[BUILD DONE, darba zarā]** Sākumlapas "Par Kalnmuižu" saturs precizēts ar publiskajos tūrisma katalogos minētajiem faktiem: aptuveni 200 gadus sena, atjaunota ēka, bioloģiskās saimniecības teritorija, Dunalkas pagasts.
+- **[BUILD DONE, FOTO PENDING]** Sākumlapā pievienota "Kalnmuiža fotogrāfijās" sadaļa ar 3 reāliem foto paredzētām vietām (ēka/teritorija, zāle, istabas), atbilstošu responsive grid un footer navigācijas saiti. Tur NAV nelegāli pārņemtu vai mākslīgi radītu foto. Galerija pilnvērtīgi gatava tikai pēc saskaņotiem, aktuāliem attēliem.
+- **[BUILD DONE]** `svinibas.html` pievienots kompakts "Pirms svinību pieteikuma" bloks ar skaidru nepieciešamo precizējumu sarakstu, saziņas CTA un saiti uz sākumlapas galerijas sekciju. Neizdomātas cenas, ēdināšana vai aprīkojums.
+- **[VISUAL SYSTEM LOCKED/PRESERVED]** Manrope, desktop H1/H2/H3 72/48/30 px, mobile 40/32/24 px, container 1280 px, 40/20 px gutters, section 96/64 px, 4/8 spacing, mierīga silto toņu palete. Hero un esošo sadaļu kompozīcijas nav mainītas.
+- **[STATIC QA PASS]** Abām lapām unikāli ID, 1 H1, visas fragmentu saites resolvējas (arī `svinibas.html → index.html#galerija`); CSS balanss, responsive gallery/planning noteikumi, noindex, pieejamības pamatstruktūra un saziņas saites pārbaudītas kodā.
+- **[VIZUĀLAIS QA NAV PASS]** 1440 / 1024 / 768 / 390 / 360 px faktisko renderējumu un Google Maps ielādi šajā izpildē nevarēja pārbaudīt. Nav piešķirts kopējais QA PASSED statuss.
+- **[PUBLISKA DEMO KODA IZVIETOŠANA]** Vercel izolētajā demo projektā atjaunināts `https://kalnmuizas-demo.vercel.app/`, `https://kalnmuizas-demo.vercel.app/svinibas.html`; izvietojums `dpl_GAxDT7TKYoXHNvDrn1mbm3ycT1MN` READY, SHA `c76739ff4d67a6f69450fe21504ec14eb9346565`, SSO atspējots tikai izolētajam demo projektam. Tas Vercel tehniski ir `target=production` šajā atsevišķajā demo projektā, nevis oficiālais Kalnmuižas produkcijas domēns. GitHub `main` netika mainīts.
+- **[PIRMS KLIENTA DEMO]** Jāpārbauda reāla mobilā un desktop versija; jāsaņem atļauja izmantot aktuālas Kalnmuižas fotogrāfijas. Publiskajos 2023. gada ziņu avotos fiksēts ugunsgrēks viesu namā, tādēļ agrāk internetā publicētie attēli var neatspoguļot vietas šodienas stāvokli.
+- **[NEXT]** Ievietot apstiprinātās aktuālās fotogrāfijas, pārbaudīt 2 publiskās lapas datorā un telefonā, pārbaudīt karti. Tad nofiksēt gala demo un sūtīt klientam.
+
 ## 2026-10-20 — Publiskā demo priekšskatījuma statuss
 - **Izolēts Vercel demo projekts:** `kalnmuizas-demo` (`prj_LfbZJdNWufQbQYlrJsYcWBgrBv8A`), nevis Kalnmuižas oficiālais domēns.
 - **Publiska demo adrese:** https://kalnmuizas-demo.vercel.app/ ; “Svinības”: https://kalnmuizas-demo.vercel.app/svinibas.html .
