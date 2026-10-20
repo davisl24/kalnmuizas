@@ -306,3 +306,46 @@
   .celebration-row,.celebration-row--reverse {padding:var(--s6) 0;gap:var(--s6);}
   .celebration-image,.celebration-row--reverse .celebration-image {aspect-ratio:1.33;}
 }
+
+/* Gallery: three editorial image locations, never substitute unlicensed imagery. */
+.photo-gallery {background:var(--cream);}
+.gallery-head {display:flex;align-items:end;justify-content:space-between;gap:var(--s12);margin-bottom:var(--s12);}
+.gallery-head .heading {max-width:760px;}
+.gallery-head p {max-width:32ch;font-size:var(--secondary);line-height:1.7;color:var(--muted);}
+.gallery-grid {display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);grid-template-rows:200px 200px;gap:var(--s3);}
+.gallery-frame {position:relative;margin:0;min-width:0;overflow:hidden;background:#d0c4b5;}
+.gallery-frame--large {grid-row:1 / span 2;background:#c3b3a2;}
+.gallery-frame--hall {background:#d1c8b8;}
+.gallery-frame--rooms {background:#c9c9bd;}
+.gallery-frame figcaption {position:absolute;bottom:var(--s6);left:var(--s6);right:var(--s6);display:flex;flex-direction:column;gap:var(--s1);}
+.gallery-frame figcaption strong {font:500 24px/1.25 var(--heading-font);letter-spacing:-.04em;color:#4a4138;}
+.gallery-frame figcaption span {font-size:var(--label);line-height:1.55;color:#564c41;}
+.gallery-note {margin-top:var(--s4);max-width:72ch;font-size:var(--label);line-height:1.65;color:var(--muted);}
+@media(max-width:860px) {
+  .gallery-head {display:block;}
+  .gallery-head p {margin-top:var(--s4);max-width:60ch;}
+}
+@media(max-width:760px) {
+  .gallery-head {margin-bottom:var(--s8);}
+  .gallery-grid {grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:var(--s2);}
+  .gallery-frame {aspect-ratio:1 / 1;min-height:0;}
+  .gallery-frame--large {grid-column:1 / -1;grid-row:auto;aspect-ratio:1.55;}
+  .gallery-frame figcaption {bottom:var(--s4);left:var(--s4);right:var(--s4);}
+  .gallery-frame figcaption strong {font-size:18px;}
+  .gallery-frame figcaption span {font-size:11px;}
+}
+
+/* Celebrations: pre-inquiry details instead of invented price lists or amenities. */
+.celebration-planning {background:#ece7df;}
+.celebration-planning-grid {display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:var(--s16);align-items:start;}
+.celebration-planning .eyebrow {display:block;margin-bottom:var(--s3);}
+.celebration-planning .heading {max-width:550px;}
+.celebration-planning-content p {max-width:60ch;font-size:var(--body);line-height:1.7;color:var(--muted);}
+.celebration-planning-links {display:flex;align-items:center;flex-wrap:wrap;gap:var(--s8);margin-top:var(--s8);}
+.celebration-gallery-link {font-weight:400;color:var(--muted);}
+@media(max-width:860px) {
+  .celebration-planning-grid {grid-template-columns:1fr;gap:var(--s8);}
+}
+@media(max-width:760px) {
+  .celebration-planning-links {align-items:flex-start;flex-direction:column;gap:var(--s3);margin-top:var(--s6);}
+}
