@@ -1,3 +1,11 @@
+## 2026-10-20 — Publiskā demo priekšskatījuma statuss
+- **Izolēts Vercel demo projekts:** `kalnmuizas-demo` (`prj_LfbZJdNWufQbQYlrJsYcWBgrBv8A`), nevis Kalnmuižas oficiālais domēns.
+- **Publiska demo adrese:** https://kalnmuizas-demo.vercel.app/ ; “Svinības”: https://kalnmuizas-demo.vercel.app/svinibas.html .
+- **Izvietošanas identifikators:** `dpl_H5N8fXvnreEW7frhAzdNZEwb6kFr`; Vercel atgriež `READY`, Git SHA `3886b04019f4257e246170620e98b49f9e789fda`, branch `feature/svinibas-page-v1`; komandas SSO/paroles aizsardzība šim izolētajam demo projektam ir atspējota. Vercel šo sākotnējo izvietojumu iekšēji klasificē kā `target=production`, jo tā ir jaunā atsevišķā Vercel projekta pirmā izvietošana; tas nemaina GitHub `main` un nav Kalnmuižas oficiālā produkcijas vietne.
+- **[GATAVS TEHNISKAI DEMO APSKATEI, NAV VIZUĀLI LOCKED]** HTML satur `noindex,nofollow`, redzamu neoficiāla demo norādi, sākumlapu, Svinību lapu, kopīgu CSS, darbību saites. Statiskā QA ir pabeigta; pārlūka renderējums 1440/390 px, iframe faktiskā ielāde un foto materiālu autentiskums/atļaujas nav apstiprinātas.
+- **[PIRMS SŪTĪŠANAS KLIENTAM]** Atvērt abas publiskās saites datorā un telefonā, notestēt karti, tālruņa/e-pasta saites. Demo ir koncepts, nevis pārbaudīta klienta aktuālā piedāvājuma publikācija.
+- **[LOCK]** Turpmāk bez jauniem datiem dizaina virzienu nepārplānot; `main` nav aiztikts.
+
 ## 2026-10-20 — KESTREL v1.1 kvalitātes pārbaude (P0/P1)
 - **STATUSS — STATIC QA PASSED, VISUAL QA OPEN.** Pārbaudītas abas lapas darba zarā `feature/svinibas-page-v1`: `index.html` un `svinibas.html`. `main` nav mainīts.
 - **[LABOTS]** Samazināta pārāk uzkrītošā neoficiālā demo josla (saglabāts paziņojums), noņemta atkārtota informācija sākumlapas “Par Kalnmuižu” un “Svinības” info joslā.
