@@ -8,6 +8,7 @@
 - `naksnosana.html` — nakšņošana un apstiprināmie fakti.
 - `galerija.html` — foto vietas (vēl nav klienta fotogrāfiju).
 - `kontakti.html` — saziņa, atrašanās vieta un maršruts.
+- `par-kalnmuizu.html` — atsevišķs stāsts par vietu.
 
 ## Publiskā demo apskate
 https://kalnmuizas-demo.vercel.app/
